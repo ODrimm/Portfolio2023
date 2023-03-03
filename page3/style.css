@@ -274,6 +274,33 @@ svg{
   z-index: 4;
 }
 
+.mobile{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile p{
+  height: fit-content;
+  width: fit-content;
+  margin: 0;
+}
+
+@media screen and (min-width: 800px){
+  .mobile{
+      pointer-events: none;
+      display: none;
+  }
+}
+
 .hiddenTop {
   top: 200vw;
   pointer-events: none;
