@@ -9,7 +9,7 @@ for(let i = 0; i < museumSection.length; i++){
 }
 
 
-function Transi(){
+function closeTransition(){
     transition.classList.add("hiddenTop")
 
     setTimeout(() => {    

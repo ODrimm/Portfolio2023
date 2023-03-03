@@ -8,7 +8,7 @@ const para2 = document.querySelector(".para2");
 let clicked = false;
 let pageChange = false;
 
-function Transi() {
+function closeTransition() {
     transition.classList.add("hiddenOpacity")
     
     setTimeout(() => {

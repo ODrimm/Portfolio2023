@@ -1,5 +1,5 @@
 const carousselElements = document.querySelectorAll(".museum-section")
-const boutons = document.querySelectorAll(".bouton")
+const buttons = document.querySelectorAll(".bouton")
 
 let carousselId = 3;
 CarousselGen(carousselId);
@@ -32,11 +32,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[0].classList.add("mainCaroussel")
-        boutons[0].classList.add("mainBouton")
+        buttons[0].classList.add("mainBouton")
 
     }
     else if (carousselPos == 1) {
@@ -50,11 +50,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[1].classList.add("mainCaroussel")
-        boutons[1].classList.add("mainBouton")
+        buttons[1].classList.add("mainBouton")
 
     }
     else if (carousselPos == 2) {
@@ -68,11 +68,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[2].classList.add("mainCaroussel")
-        boutons[2].classList.add("mainBouton")
+        buttons[2].classList.add("mainBouton")
 
     }
     else if (carousselPos == 3) {
@@ -86,11 +86,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[3].classList.add("mainCaroussel")
-        boutons[3].classList.add("mainBouton")
+        buttons[3].classList.add("mainBouton")
 
     }
     else if (carousselPos == 4) {
@@ -104,11 +104,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[4].classList.add("mainCaroussel")
-        boutons[4].classList.add("mainBouton")
+        buttons[4].classList.add("mainBouton")
 
     }
     else if (carousselPos == 5) {
@@ -122,11 +122,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[5].classList.add("mainCaroussel")
-        boutons[5].classList.add("mainBouton")
+        buttons[5].classList.add("mainBouton")
 
     }
     else if (carousselPos == 6) {
@@ -140,11 +140,11 @@ function CarousselGen(carousselPos) {
 
         for(let i = 0; i < carousselElements.length; i++){
             carousselElements[i].classList.remove("mainCaroussel")
-            boutons[i].classList.remove("mainBouton")
+            buttons[i].classList.remove("mainBouton")
 
         }
         carousselElements[6].classList.add("mainCaroussel")
-        boutons[6].classList.add("mainBouton")
+        buttons[6].classList.add("mainBouton")
 
 
     }

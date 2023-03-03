@@ -1,4 +1,4 @@
-//////////////////// TEXT MOVEMENT \\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////// TEXT DISPLAY \\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 const diag = windowDiag();
 const maxSize = 24;
@@ -63,22 +63,4 @@ function objectTransform(compSelector) {
         comp.style.fontSize = maxSize + "px";
         comp.style.opacity = 1;
     }
-}
-
-
-
-
-////////////////////////////////////// DATE DISPLAY \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-dateDisplay = document.querySelector(".heure")
-
-
-displayDate();
-function displayDate() {
-
-    var today = new Date();
-
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-    dateDisplay.innerHTML = time;
-    requestAnimationFrame(displayDate)
 }
