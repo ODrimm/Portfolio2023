@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./page3/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Camille Fourcade</title>
-    <link rel="icon" type="image/x-icon" href="./Assets/Images/favIcon.png">
+    <link rel="icon" type="image/x-icon" href="../Assets/Images/favIcon.png">
     <meta name=" description "  content= "Bienvenu sur le site web de Camille Fourcade, étudiant en MMI, développeur indépendant et Artiste Polyvalent.">
     <script defer type="importmap">
     {
@@ -16,22 +16,22 @@
         }
     }
     </script>
-    <script defer type="module" src="./page3/three.js"></script>
-    <script defer src="./page3/main.js"></script>
+    <script defer type="module" src="./three.js"></script>
+    <script defer src="./main.js"></script>
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
-    <script defer src="./page3/transition.js"></script>
+    <script defer src="./transition.js"></script>
 </head>
 
 <body>
     <section class="wrapper">
         <section class="top">
             <section class="titre">
-                <img class="deco-title" src="./Assets/SVG/Line-title.svg"></img>
+                <img class="deco-title" src="../Assets/SVG/Line-title.svg"></img>
                 <h1><span>Camille Fourcade -</span><span> MMI Bordeaux</span></h1>
             </section>
             <section class="heure"></section>
         </section>
-        <section class="nextPage hiddenTop" onclick="return changePage('./page4.html');"> 
+        <section class="nextPage hiddenTop" onclick="return changePage('../conclusion');"> 
             <p>page suivante</p>
         </section>
         <canvas id="canvas"></canvas>
@@ -94,7 +94,7 @@
 
     
     <section class="mobile">
-        <img src="./Assets/SVG/wip.svg" alt="">
+        <img src="../Assets/SVG/wip.svg" alt="">
         <p>Version mobile en cours de developpement.</p>
         <p>En attendant, veuillez ouvrir le site sur ordinateur.</p>
     </section>
