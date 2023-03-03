@@ -35,18 +35,14 @@ body{
     transition: all, 0.05s;
 }
 
-#Scene1, #Scene2, #Scene3{
+#Scene1{
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
-#Scene2{
-    background-color: white;
-}
-
-#Scene1 .top{
+.top{
     position: relative;
     display: flex;
     height: 10%;
@@ -54,21 +50,21 @@ body{
     z-index: 2;
 }
 
-#Scene1 .deco-header{
+.deco-header{
     width: 50%;
     margin-right: 3rem;
     margin-right: 5rem;
     margin-left: 1rem;
 }
 
-#Scene1 .titre{
+.titre{
     display: flex;
     align-items: center;
     margin-left: 1rem;
     min-width: 360px;
 }
 
-#Scene1 .titre .deco-title{
+.titre .deco-title{
     position: relative;
     height: 3rem;
     top: 0.2rem;
@@ -77,12 +73,12 @@ body{
 
 
 
-#Scene1 .titre h1{
+.titre h1{
     display: flex;
     align-items: center;
 }
 
-#Scene1 .titre h1 span:nth-child(1){
+.titre h1 span:nth-child(1){
     font-family: "Basquiat";
     font-weight: lighter;
     margin: 0;
@@ -91,7 +87,7 @@ body{
 
 }
 
-#Scene1 .titre h1 span:nth-child(2){
+.titre h1 span:nth-child(2){
     font-family: "Luam";
     font-weight: lighter;
     margin: 0;
@@ -102,35 +98,44 @@ body{
     top: 3px;
 }
 
-#Scene1 .main{
+.main{
     position: relative;
     height: 90%;
 }
 
-#Scene1 .bg{
+.bg{
     position: absolute;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    flex-direction: row-reverse;
     opacity: 0.7;
 }
 
-#Scene1 .overlay{
+.bg img:nth-child(3){
+    transform: rotate(50deg);
+}
+
+.bg img:nth-child(4){
+    transform: rotate(195deg);
+}
+
+.overlay{
     position: absolute;
     height: 100%;
     width: 100%;
     
 }
 
-#Scene1 .overlay .text{
+.overlay .text{
     position: relative;
     width: fit-content;
     margin-top: 35vh;
     margin-left: 8rem;
 }
 
-#Scene1 .overlay .text .deco-text{
+.overlay .text .deco-text{
     position: absolute;
     top: -1.75rem;
     left: -1.5rem;
@@ -138,17 +143,17 @@ body{
     mix-blend-mode: difference;
 }
 
-#Scene1 .overlay .text .deco-text-fill{
+.overlay .text .deco-text-fill{
     position: absolute;
     top: -1.75rem;
     left: -1.5rem;
 }
 
-#Scene1 .overlay .text h1{
+.overlay .text h1{
     margin: 0;
 }
 
-#Scene1 .overlay .text .main-txt1{
+.overlay .text .main-txt1{
     position: relative;
     font-family: "Basquiat";
     font-weight: lighter;
@@ -157,12 +162,12 @@ body{
     transition: all 0.5s cubic-bezier(0.37,-0.78, 0.45, 1.66);
 }
 
-#Scene1 .overlay .text:hover .main-txt1{
+.overlay .text:hover .main-txt1{
     transform: rotate(-1deg);
     font-size: 38px;
 }
 
-#Scene1 .overlay .text .main-txt2{
+.overlay .text .main-txt2{
     position: relative;
     font-family: "Acrylic";
     font-weight: lighter;
@@ -175,13 +180,13 @@ body{
 
 }
 
-#Scene1 .overlay .text:hover .main-txt2{
+.overlay .text:hover .main-txt2{
     transform: translateY(-5px);
     transform: rotate(1deg);
     font-size: 50px;
 }
 
-#Scene1 .overlay .text .main-txt3{
+.overlay .text .main-txt3{
     position: relative;
     font-weight: lighter;
     font-size: 35px;
@@ -190,7 +195,7 @@ body{
 
 }
 
-#Scene1 .overlay .text:hover .main-txt3{
+.overlay .text:hover .main-txt3{
     /* transform: rotate(5deg); */
     transform: translateY(-5px);
 }
