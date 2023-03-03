@@ -270,7 +270,7 @@ body {
 
 .mobile p{
   height: fit-content;
-  width: fit-content;
+  width: 80vw;
   margin: 0;
 }
 
