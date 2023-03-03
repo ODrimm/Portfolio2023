@@ -289,24 +289,23 @@ body {
   }
 }
 
-
 .hiddenTop {
-  top: 200vw;
+  transform: translateY(200vw);
   pointer-events: none;
 }
 
 .hiddenLeft {
-  left: 200vw;
+  transform: translateX(200vw);
   pointer-events: none;
 }
 
 .hiddenBottom {
-  top: -200vw;
+  transform: translateY(-200vw);
   pointer-events: none;
 }
 
 .hiddenRight {
-  left: -200vw;
+  transform: translateX(-200vw);
   pointer-events: none;
 }
 
