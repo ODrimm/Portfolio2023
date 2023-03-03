@@ -1,0 +1,285 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+
+.top{
+  position: relative;
+  display: flex;
+  height: 10%;
+  justify-content: space-between;
+  z-index: 2;
+  color: #00FF00;
+  text-shadow: 0 0 7px #00ff00;
+  align-items: center;
+}
+
+.deco-header{
+  width: 50%;
+  margin-right: 3rem;
+  margin-right: 5rem;
+  margin-left: 1rem;
+  opacity: 0;
+}
+
+.heure{
+  margin-right: 1rem;
+}
+
+.titre{
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  min-width: 360px;
+}
+
+.titre .deco-title{
+  position: relative;
+  height: 3rem;
+  top: 0.2rem;
+  left: 0.2rem;
+  
+}
+
+
+
+.titre h1{
+  display: flex;
+  align-items: center;
+}
+
+.titre h1 span:nth-child(1){
+  font-family: "Basquiat";
+  font-weight: lighter;
+  margin: 0;
+  height: fit-content;
+  font-size: 2rem;
+
+}
+
+.titre h1 span:nth-child(2){
+  font-family: "Luam";
+  font-weight: lighter;
+  margin: 0;
+  height: fit-content;
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 3px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image:linear-gradient(transparent, transparent 3px, #122510);
+  background-size:4px 4px;
+
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.competences {
+  position: absolute;
+  color: hsl(120, 96%, 63%);
+  z-index: 1;
+  text-shadow: 0 0 7px #00ff00;
+}
+
+
+.competence1 {
+  top: 30rem;
+  left: 12vw;
+}
+
+.competence2 {
+  top: 25rem;
+  left: 80vw;
+}
+
+.competence3 {
+  top: 18rem;
+  left: 10vw;
+}
+
+.competence4 {
+  top: 10rem;
+  left: 20vw;
+}
+
+.competence5 {
+  top: 10rem;
+  left: 70vw;
+}
+
+.competence6 {
+  top: 80vh;
+  left: 30vw;
+}
+
+.competence7 {
+  top: 80vh;
+  left: 60vw;
+}
+
+.competence8 {
+  top: 7vh;
+  left: 27vw;
+}
+
+.competences .titre {
+  margin: 0;
+  transition: opacity 0.5s;
+}
+
+.competences:hover .titre {
+  transition: all 0.3s;
+}
+
+.details {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details p {
+  margin: 0;
+  transition: all 0.2s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.nextPage {
+  width: fit-content;
+  color: black;
+  position: relative;
+  left: 50%;
+  top: 100%;
+  cursor: pointer;
+  transition: all 1s;
+  font-weight: lighter;
+  height: fit-content;
+  transform: translate(-50%, -20vh);
+  background-color: #00FF00;
+  text-align: center;
+}
+
+.nextPage:hover {
+  animation-duration: 1s;
+  animation-name: text-wiggle;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+
+@keyframes text-wiggle{
+  0%{
+      transform:   translate(-50%, -20vh) rotate(0deg);
+  }
+  15%{
+      transform:   translate(-50%, -20vh) rotate(5deg);
+
+  }
+  30%{
+      transform:   translate(-50%, -20vh) rotate(-5deg);
+
+  }
+  45%{
+      transform:   translate(-50%, -20vh) rotate(5deg);
+
+  }
+  60%{
+      transform:  translate(-50%, -20vh) rotate(0deg);
+  }
+}
+
+svg{
+  width: 100%; 
+  height: 100vh; 
+  display: block;
+}
+
+.transition {
+  position: fixed;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  left: 0;
+  transition: all 2s;
+  z-index: 4;
+  background-image:linear-gradient(transparent, transparent 3px, #262f25);
+  background-size:4px 4px;
+  /* filter: url(#filter); */
+}
+
+.transition-content {
+  position: absolute;
+  width: 50vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  transition: all 1s;
+}
+
+.transition-content p {
+  color: #00FF00;
+  text-align: center;
+  text-shadow: 0 0 7px #00ff00;
+}
+
+.transitionB {
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  left: 0;
+  transition: all 1s;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.hiddenTop {
+  top: 200vw;
+  pointer-events: none;
+}
+
+.hiddenLeft {
+  left: 200vw;
+  pointer-events: none;
+}
+
+.hiddenBottom {
+  top: -200vw;
+  pointer-events: none;
+}
+
+.hiddenRight {
+  left: -200vw;
+  pointer-events: none;
+}
+
+.hiddenOpacity {
+  opacity: 0;
+  pointer-events: none;
+}

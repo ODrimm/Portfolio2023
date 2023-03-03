@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Acrylic";
+  src: url("../Assets/Fonts/AcylicalHand-Thick.ttf");
+}
+
+@font-face {
+  font-family: "Basquiat";
+  src: url("../Assets/Fonts/BASQUIAT.otf");
+}
+
+@font-face {
+  font-family: "Luam";
+  src: url("../Assets/Fonts/Luam-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../Assets/Fonts/georgia.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  font-family: "Luam";
+  font-weight: lighter;
+}
+
+#Scene1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+#Scene1 .top {
+  position: relative;
+  display: flex;
+  height: 10%;
+  justify-content: space-between;
+  z-index: 2;
+  align-items: center;
+}
+
+#Scene1 .top .top-deco {
+  font-family: "Georgia";
+  font-size: 20px;
+  margin-right: 3rem;
+  transform: scaleX(1.5) scaleY(0.8);
+}
+
+#Scene1 .titre {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  min-width: 360px;
+  cursor: pointer;
+}
+
+#Scene1 .titre .deco-title {
+  position: relative;
+  height: 3rem;
+  top: 0.2rem;
+  left: 0.2rem;
+  filter: brightness(0);
+}
+
+
+
+#Scene1 .titre h1 {
+  display: flex;
+  align-items: center;
+}
+
+#Scene1 .titre h1 span:nth-child(1) {
+  font-family: "Basquiat";
+  font-weight: lighter;
+  margin: 0;
+  height: fit-content;
+  font-size: 2rem;
+
+}
+
+#Scene1 .titre h1 span:nth-child(2) {
+  font-family: "Luam";
+  font-weight: lighter;
+  margin: 0;
+  height: fit-content;
+  font-size: 1.7rem;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 3px;
+}
+
+.middle {
+  font-family: "Georgia";
+  font-weight: lighter;
+  margin-left: 6vw;
+  position: relative;
+  top: -2rem;
+}
+
+.middle h2 {
+  font-weight: lighter;
+}
+
+.middle h3 {
+  margin: 0;
+  transform: scaleX(1) scaleY(0.7);
+  font-weight: lighter;
+}
+
+.middle a {
+  color: black;
+}
+
+
+.dates {
+  display: flex;
+  width: 75vw;
+  max-width: 949px;
+  justify-content: space-around;
+}
+
+.dates h4 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+
+}
+
+.deco {
+  position: relative;
+  margin-left: 6vw;
+  top: 3rem;
+}
+
+.deco-txt img:nth-child(1) {
+  width: 75vw;
+  max-width: 949px;
+  position: relative;
+  top: 0.7rem;
+}
+
+.deco-txt img:nth-child(2) {
+  width: 88vw;
+}
+
+.deco-txt img:nth-child(3) {
+  width: 75vw;
+  max-width: 949px;
+}
+
+.footer {
+  height: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
+.main-footer h5 {
+  font-size: 25px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.logos {
+  display: flex;
+  width: 19vw;
+  min-width: 240px;
+  justify-content: space-between;
+}
+
+.logos img {
+  width: 90%;
+}
+
+.bottom-footer {
+  background-color: black;
+  width: 100vw;
+  height: 1vh;
+}
+
+.transition {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  left: 0;
+  transition: all 1s;
+  z-index: 4;
+}
+
+
+
+.nextPage {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 8rem;
+  margin-top: 70vh;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0, 1.35, 0.11, 0.95);
+}
+
+.nextPage h3 {
+  font-family: "Acrylic";
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+  transition: all 0.6s cubic-bezier(0.15, 1.45, 0.79, 1.09);
+}
+
+.nextPage img {
+  position: relative;
+  width: 2rem;
+  margin-left: 0%;
+  top: -15px;
+  rotate: -90deg;
+  transform: scaleX(-1);
+  transition: all 0.4s cubic-bezier(0.15, 1.45, 0.79, 1.09);
+}
+
+.nextPage:hover h3 {
+  transform: rotate(-5deg);
+}
+
+.nextPage:hover img {
+  margin-left: 80%;
+  transform: scaleX(-1) rotate(5deg);
+}
+
+
+
+.hiddenTop {
+  top: 200vw;
+  pointer-events: none;
+}
+
+.hiddenLeft {
+  left: 200vw;
+  pointer-events: none;
+}
+
+.hiddenBottom {
+  top: -200vw;
+  pointer-events: none;
+}
+
+.hiddenRight {
+  left: -200vw;
+  pointer-events: none;
+}
+
+.hiddenOpacity {
+  opacity: 0;
+  pointer-events: none;
+}

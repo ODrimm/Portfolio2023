@@ -1,0 +1,24 @@
+const transition = document.querySelector(".transition");
+const nextPage = document.querySelector(".nextPage");
+
+
+setTimeout(() => {    
+    transition.classList.toggle("hiddenOpacity")
+}, 500);
+
+setTimeout(() => {    
+    //nextPage.classList.remove("hiddenRight")
+}, 5000);
+
+addEventListener("click", (event) => {
+    //nextPage.classList.remove("hiddenRight")
+});
+
+
+function changePage(href){
+    setTimeout(() => {    
+        location.href = href
+    }, 1000);
+    transition.classList.remove("hiddenOpacity")
+}
+
