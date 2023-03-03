@@ -381,10 +381,19 @@ h3 {
     align-items: center;
 }
 
-.mobile p{
+.mobile p {
     height: fit-content;
     width: 80vw;
     margin: 0;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+
+}
+
+.mobile img {
+    height: 20vw;
+    margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 800px){

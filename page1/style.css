@@ -13,11 +13,11 @@
     src: url("../Assets/Fonts/Luam-Regular.ttf");
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: black;
@@ -26,23 +26,23 @@ body{
     font-weight: lighter;
 }
 
-#circle{
+#circle {
     position: absolute;
     width: 200vw;
     height: 200vw;
-    transform: translate(-50%,-52%);
+    transform: translate(-50%, -52%);
     background-image: radial-gradient(rgba(33, 33, 33, 0.277) 2%, rgba(49, 49, 49, 0.353) 3%, black 10%);
     transition: all, 0.05s;
 }
 
-#Scene1{
+#Scene1 {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
-.top{
+.top {
     position: relative;
     display: flex;
     height: 10%;
@@ -50,21 +50,21 @@ body{
     z-index: 2;
 }
 
-.deco-header{
+.deco-header {
     width: 50%;
     margin-right: 3rem;
     margin-right: 5rem;
     margin-left: 1rem;
 }
 
-.titre{
+.titre {
     display: flex;
     align-items: center;
     margin-left: 1rem;
     min-width: 360px;
 }
 
-.titre .deco-title{
+.titre .deco-title {
     position: relative;
     height: 3rem;
     top: 0.2rem;
@@ -73,12 +73,12 @@ body{
 
 
 
-.titre h1{
+.titre h1 {
     display: flex;
     align-items: center;
 }
 
-.titre h1 span:nth-child(1){
+.titre h1 span:nth-child(1) {
     font-family: "Basquiat";
     font-weight: lighter;
     margin: 0;
@@ -87,7 +87,7 @@ body{
 
 }
 
-.titre h1 span:nth-child(2){
+.titre h1 span:nth-child(2) {
     font-family: "Luam";
     font-weight: lighter;
     margin: 0;
@@ -98,12 +98,12 @@ body{
     top: 3px;
 }
 
-.main{
+.main {
     position: relative;
     height: 90%;
 }
 
-.bg{
+.bg {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -113,29 +113,29 @@ body{
     opacity: 0.7;
 }
 
-.bg img:nth-child(3){
+.bg img:nth-child(3) {
     transform: rotate(50deg);
 }
 
-.bg img:nth-child(4){
+.bg img:nth-child(4) {
     transform: rotate(195deg);
 }
 
-.overlay{
+.overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    
+
 }
 
-.overlay .text{
+.overlay .text {
     position: relative;
     width: fit-content;
     margin-top: 35vh;
     margin-left: 8rem;
 }
 
-.overlay .text .deco-text{
+.overlay .text .deco-text {
     position: absolute;
     top: -1.75rem;
     left: -1.5rem;
@@ -143,31 +143,31 @@ body{
     mix-blend-mode: difference;
 }
 
-.overlay .text .deco-text-fill{
+.overlay .text .deco-text-fill {
     position: absolute;
     top: -1.75rem;
     left: -1.5rem;
 }
 
-.overlay .text h1{
+.overlay .text h1 {
     margin: 0;
 }
 
-.overlay .text .main-txt1{
+.overlay .text .main-txt1 {
     position: relative;
     font-family: "Basquiat";
     font-weight: lighter;
     font-size: 35px;
     z-index: 1;
-    transition: all 0.5s cubic-bezier(0.37,-0.78, 0.45, 1.66);
+    transition: all 0.5s cubic-bezier(0.37, -0.78, 0.45, 1.66);
 }
 
-.overlay .text:hover .main-txt1{
+.overlay .text:hover .main-txt1 {
     transform: rotate(-1deg);
     font-size: 38px;
 }
 
-.overlay .text .main-txt2{
+.overlay .text .main-txt2 {
     position: relative;
     font-family: "Acrylic";
     font-weight: lighter;
@@ -180,13 +180,13 @@ body{
 
 }
 
-.overlay .text:hover .main-txt2{
+.overlay .text:hover .main-txt2 {
     transform: translateY(-5px);
     transform: rotate(1deg);
     font-size: 50px;
 }
 
-.overlay .text .main-txt3{
+.overlay .text .main-txt3 {
     position: relative;
     font-weight: lighter;
     font-size: 35px;
@@ -195,12 +195,12 @@ body{
 
 }
 
-.overlay .text:hover .main-txt3{
+.overlay .text:hover .main-txt3 {
     /* transform: rotate(5deg); */
     transform: translateY(-5px);
 }
 
-.transition{
+.transition {
     position: fixed;
     background-color: white;
     width: 100vw;
@@ -215,7 +215,7 @@ body{
 
 
 
-.nextPage{
+.nextPage {
     opacity: 1;
     position: absolute;
     top: 0;
@@ -226,7 +226,7 @@ body{
     transition: all 0.8s cubic-bezier(0, 1.35, 0.11, 0.95);
 }
 
-.nextPage h3{
+.nextPage h3 {
     font-family: "Acrylic";
     text-align: center;
     margin: 0;
@@ -234,7 +234,7 @@ body{
     transition: all 0.6s cubic-bezier(0.15, 1.45, 0.79, 1.09);
 }
 
-.nextPage img{
+.nextPage img {
     position: relative;
     width: 2rem;
     margin-left: 0%;
@@ -244,15 +244,16 @@ body{
     transition: all 0.4s cubic-bezier(0.15, 1.45, 0.79, 1.09);
 }
 
-.nextPage:hover h3{
+.nextPage:hover h3 {
     transform: rotate(-5deg);
 }
-.nextPage:hover img{
+
+.nextPage:hover img {
     margin-left: 80%;
     transform: scaleX(-1) rotate(5deg);
 }
 
-.mobile{
+.mobile {
     position: absolute;
     top: 0;
     left: 0;
@@ -266,41 +267,50 @@ body{
     align-items: center;
 }
 
-.mobile p{
+.mobile p {
     height: fit-content;
     width: 80vw;
     margin: 0;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+
 }
 
-@media screen and (min-width: 800px){
-    .mobile{
+.mobile img {
+    height: 20vw;
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .mobile {
         pointer-events: none;
         display: none;
     }
 }
 
 
-.hiddenTop{
+.hiddenTop {
     top: 200vw;
     pointer-events: none;
 }
 
-.hiddenLeft{
+.hiddenLeft {
     left: 200vw;
     pointer-events: none;
 }
 
-.hiddenBottom{
+.hiddenBottom {
     top: -200vw;
     pointer-events: none;
 }
 
-.hiddenRight{
+.hiddenRight {
     left: -200vw;
     pointer-events: none;
 }
 
-.hiddenOpacity{
+.hiddenOpacity {
     opacity: 0;
     pointer-events: none;
-}   
+}
