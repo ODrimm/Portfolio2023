@@ -237,11 +237,9 @@ svg{
   left: 0;
   opacity: 1;
   left: 0;
-  transition: all 2s;
   z-index: 4;
   background-image:linear-gradient(transparent, transparent 3px, #262f25);
   background-size:4px 4px;
-  /* filter: url(#filter); */
 }
 
 .transition-content {

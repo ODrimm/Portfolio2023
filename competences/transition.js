@@ -1,5 +1,5 @@
 const transition = document.querySelector(".transition");
-const transitionB = document.querySelector(".transitionB");
+const transitionBack = document.querySelector(".transitionB");
 const transitionContent = document.querySelector(".transition-content");
 const nextPage = document.querySelector(".nextPage");
 const para1 = document.querySelector(".para1");
@@ -9,6 +9,8 @@ let clicked = false;
 let pageChange = false;
 
 function closeTransition() {
+    transition.style.transition = "all 2s";
+
     transition.classList.add("hiddenOpacity")
     
     setTimeout(() => {
@@ -36,7 +38,7 @@ function changePage(href) {
     setTimeout(() => {
         location.href = href
     }, 1000);
-    transitionB.classList.toggle("hiddenBottom")
+    transitionBack.classList.toggle("hiddenBottom")
 }
 
 let i = 0;
