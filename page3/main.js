@@ -15,6 +15,7 @@ document.addEventListener('mousemove', event => {
     objectTransform(".competence5");
     objectTransform(".competence6");
     objectTransform(".competence7");
+    objectTransform(".competence8");
 })
 
 function windowDiag() {
