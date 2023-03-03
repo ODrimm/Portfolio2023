@@ -117,10 +117,13 @@ body {
   margin: 0;
   transform: scaleX(1) scaleY(0.7);
   font-weight: lighter;
+  width: fit-content;
 }
 
 .middle a {
   color: black;
+  width: fit-content;
+  display: block;
 }
 
 
