@@ -2,7 +2,9 @@ const transition = document.querySelector(".transition");
 const nextPage = document.querySelector(".nextPage");
 
 
-setTimeout(() => {    
+setTimeout(() => {  
+    transition.style.transition = "all 1s";
+  
     transition.classList.toggle("hiddenBottom")
 }, 500);
 
