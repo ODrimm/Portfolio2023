@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Acrylic";
+  src: url("../Assets/Fonts/AcylicalHand-Thick.ttf");
+}
+
+@font-face {
+  font-family: "Basquiat";
+  src: url("../Assets/Fonts/BASQUIAT.otf");
+}
+
+@font-face {
+  font-family: "Luam";
+  src: url("../Assets/Fonts/Luam-Regular.ttf");
+}
+
 html,
 body {
   margin: 0;
