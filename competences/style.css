@@ -401,7 +401,7 @@ svg {
 }
 
 .hiddenTop {
-  transform: translateY(200vw);
+  transform: translateY(200vh);
   pointer-events: none;
 }
 
@@ -411,7 +411,7 @@ svg {
 }
 
 .hiddenBottom {
-  transform: translateY(-200vw);
+  transform: translateY(-200vh);
   pointer-events: none;
 }
 
