@@ -98,6 +98,17 @@ body {
     top: 3px;
 }
 
+.titre h1 span:nth-child(3) {
+    font-family: "Luam";
+    font-weight: lighter;
+    margin: 0;
+    height: fit-content;
+    font-size: 1.7rem;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 3px;
+}
+
 .main {
     position: relative;
     height: 90%;
@@ -281,16 +292,30 @@ body {
     margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 800px) {
-    .mobile {
-        pointer-events: none;
+@media screen and (max-width: 800px) {
+
+    .top{
+        justify-content: center;
+    }
+
+    .titre{
+        justify-content: center;
+    }
+
+    .titre h1{
+        flex-wrap: wrap;
+        width: 70%;
+        justify-content: center;
+    }
+
+    .deco-header{
         display: none;
     }
 }
 
 
 .hiddenTop {
-    transform: translateY(200vw);
+    transform: translateY(200vh);
     pointer-events: none;
 }
 
@@ -300,7 +325,7 @@ body {
 }
 
 .hiddenBottom {
-    transform: translateY(-200vw);
+    transform: translateY(-200vh);
     pointer-events: none;
 }
 
