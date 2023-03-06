@@ -42,7 +42,7 @@ body {
 }
 
 
-#Scene1 .top {
+.top {
   position: relative;
   display: flex;
   height: 10%;
@@ -51,14 +51,14 @@ body {
   align-items: center;
 }
 
-#Scene1 .top .top-deco {
+.top .top-deco {
   font-family: "Georgia";
   font-size: 20px;
   margin-right: 3rem;
   transform: scaleX(1.5) scaleY(0.8);
 }
 
-#Scene1 .titre {
+.titre {
   display: flex;
   align-items: center;
   margin-left: 1rem;
@@ -66,7 +66,7 @@ body {
   cursor: pointer;
 }
 
-#Scene1 .titre .deco-title {
+.titre .deco-title {
   position: relative;
   height: 3rem;
   top: 0.2rem;
@@ -76,12 +76,12 @@ body {
 
 
 
-#Scene1 .titre h1 {
+.titre h1 {
   display: flex;
   align-items: center;
 }
 
-#Scene1 .titre h1 span:nth-child(1) {
+.titre h1 span:nth-child(1) {
   font-family: "Basquiat";
   font-weight: lighter;
   margin: 0;
@@ -90,7 +90,7 @@ body {
 
 }
 
-#Scene1 .titre h1 span:nth-child(2) {
+.titre h1 span:nth-child(2) {
   font-family: "Luam";
   font-weight: lighter;
   margin: 0;
@@ -253,7 +253,7 @@ body {
   transform: scaleX(-1) rotate(5deg);
 }
 
-.mobile{
+.mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -281,10 +281,45 @@ body {
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 800px){
-  .mobile{
-      pointer-events: none;
-      display: none;
+@media screen and (max-width: 800px) {
+  .top {
+    justify-content: center;
+  }
+
+  .titre {
+    justify-content: center;
+    min-width: unset;
+  }
+
+  .titre h1 {
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .deco-header {
+    display: none;
+  }
+
+  .deco-title {
+    display: none;
+  }
+
+  .top .top-deco{
+    display: none;
+  }
+
+  .logos{
+    min-width: unset;
+    width: unset;
+  }
+
+  .logos a{
+    width: 30px;
+  }
+
+  .main-footer h5{
+    font-size: 15px;
   }
 }
 
