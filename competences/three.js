@@ -11,7 +11,18 @@ const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#canvas'),
 });
 
+
 renderer.setSize(window.innerWidth, window.innerHeight);
+
+addEventListener("resize", (event) => {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  effect.render(scene, camera);
+
+});
+
 camera.position.setZ(0);
 
 const effect = new AsciiEffect(renderer, ' .#', { invert: true });

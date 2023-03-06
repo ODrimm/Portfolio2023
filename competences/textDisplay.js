@@ -9,6 +9,7 @@ const amplSize = maxSize - minSize;
 if (window.matchMedia("(max-width: 800px)").matches) {
     animate();
 }
+
 function animate() {
 
     mobileTextHandler(".competence1")
@@ -19,7 +20,9 @@ function animate() {
     mobileTextHandler(".competence6")
     mobileTextHandler(".competence7")
     mobileTextHandler(".competence8")  //300 a 165
-    requestAnimationFrame(animate);
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        requestAnimationFrame(animate);
+    }
 }
 
 

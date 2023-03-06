@@ -3,6 +3,9 @@ const buttons = document.querySelectorAll(".bouton")
 
 let carousselId = 3;
 CarousselGen(carousselId);
+addEventListener("resize", (event) => {
+    CarousselGen(carousselId);
+});
 
 
 function CarousselUp() {
@@ -28,6 +31,8 @@ function CarousselGen(carousselPos) {
         }
 
         for (let i = 0; i < carousselElements.length; i++) {
+           carousselElements[i].style.top = 50 + "%"
+
             if (i == carousselPos) {
                 carousselElements[i].style.left = 40 + "%"
                 carousselElements[i].classList.add("mainCaroussel")
@@ -55,6 +60,9 @@ function CarousselGen(carousselPos) {
         }
 
         for (let i = 0; i < carousselElements.length; i++) {
+
+            carousselElements[i].style.left = "unset"
+
             if (i == carousselPos) {
                 carousselElements[i].style.top = 50 + "%"
                 carousselElements[i].classList.add("mainCaroussel")
