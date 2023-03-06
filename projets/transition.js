@@ -13,9 +13,14 @@ function closeTransition(){
     transition.style.transition = "all 3s";
     transition.classList.add("hiddenTop")
 
-    setTimeout(() => {    
+    if (window.matchMedia("(max-width: 800px)").matches) {
         nextPage.classList.remove("hiddenOpacity")
-    }, 5000);
+    }else{
+        setTimeout(() => {    
+            nextPage.classList.remove("hiddenOpacity")
+        }, 5000);
+    }
+    
 }
 
 addEventListener("click", (event) => {
