@@ -5,7 +5,10 @@ const maxSize = 24;
 const minSize = -5;
 const amplSize = maxSize - minSize;
 
-animate();
+
+if (window.matchMedia("(max-width: 800px)").matches) {
+    animate();
+}
 function animate() {
 
     mobileTextHandler(".competence1")
