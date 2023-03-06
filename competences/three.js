@@ -21,9 +21,11 @@ effect.domElement.style.backgroundColor = 'black';
 effect.domElement.style.position = 'fixed';
 effect.domElement.style.top = '0';
 effect.domElement.style.left = '0';
-effect.domElement.style.zIndex = '-1';
+effect.domElement.style.zIndex = '1';
 effect.domElement.style.opacity = '1';
 effect.domElement.style.textShadow = '0 0 7px #00ff00';
+effect.domElement.style.backgroundImage = "linear-gradient(transparent, transparent 3px, #122510)";
+effect.domElement.style.backgroundSize = "4px 4px";
 if (window.matchMedia("(max-width: 800px)").matches) {
   effect.domElement.style.color = '#005500';
 
