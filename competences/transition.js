@@ -13,12 +13,18 @@ function closeTransition() {
 
     transition.classList.add("hiddenOpacity")
     
-    setTimeout(() => {
-        clicked = true;
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        nextPage.classList.remove("hiddenTop")
+
+    }else{
         setTimeout(() => {
-            nextPage.classList.remove("hiddenTop")
-        }, 5000);
-    }, 1000);
+            clicked = true;
+            setTimeout(() => {
+                nextPage.classList.remove("hiddenTop")
+            }, 5000);
+        }, 1000);
+    }
+    
 }
 
 addEventListener("click", (event) => {

@@ -1,22 +1,22 @@
 @font-face {
     font-family: "Acrylic";
     src: url("../Assets/Fonts/AcylicalHand-Thick.ttf");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Basquiat";
     src: url("../Assets/Fonts/BASQUIAT.otf");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Luam";
     src: url("../Assets/Fonts/Luam-Regular.ttf");
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Georgia";
     src: url("../Assets/Fonts/georgia.ttf");
-  }
+}
 
 body {
     margin: 0;
@@ -29,7 +29,7 @@ canvas {
     top: 0;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
 }
@@ -42,7 +42,7 @@ a{
     overflow: hidden;
 }
 
-#Scene .top{
+.top {
     position: relative;
     display: flex;
     height: 10%;
@@ -50,21 +50,21 @@ a{
     z-index: 2;
 }
 
-#Scene .deco-header{
+.deco-header {
     width: 50%;
     margin-right: 3rem;
     margin-right: 5rem;
     margin-left: 1rem;
 }
 
-#Scene .titre{
+.titre {
     display: flex;
     align-items: center;
     margin-left: 1rem;
     min-width: 360px;
 }
 
-#Scene .titre .deco-title{
+.titre .deco-title {
     position: relative;
     height: 3rem;
     top: 0.2rem;
@@ -74,12 +74,12 @@ a{
 
 
 
-#Scene .titre h1{
+.titre h1 {
     display: flex;
     align-items: center;
 }
 
-#Scene .titre h1 span:nth-child(1){
+.titre h1 span:nth-child(1) {
     font-family: "Basquiat";
     font-weight: lighter;
     margin: 0;
@@ -88,7 +88,7 @@ a{
 
 }
 
-#Scene .titre h1 span:nth-child(2){
+.titre h1 span:nth-child(2) {
     font-family: "Luam";
     font-weight: lighter;
     margin: 0;
@@ -99,7 +99,7 @@ a{
     top: 3px;
 }
 
-.content{
+.content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,32 +149,32 @@ a{
 
 
 
-.photographie{
+.photographie {
     background-image: url("../Assets/Images/photo.png");
 
 }
 
-.crea-web{
+.crea-web {
     background-image: url("../Assets/Images/ava.png");
 }
 
-.video{
+.video {
     background-image: url("../Assets/Images/video.png");
 }
 
-.troid{
+.troid {
     background-image: url("../Assets/Images/3d.png");
 }
 
-.jv{
+.jv {
     background-image: url("../Assets/Images/jv.png");
 }
 
-.dessin{
+.dessin {
     background-image: url("../Assets/Images/dessin.png");
 }
 
-.anim{
+.anim {
     background-image: url("../Assets/Images/anim.png");
 }
 
@@ -239,28 +239,32 @@ h3 {
     animation-direction: forward;
 }
 
-@keyframes text-wiggle{
-    0%{
-        transform:   rotate(0deg);
+@keyframes text-wiggle {
+    0% {
+        transform: rotate(0deg);
     }
-    15%{
-        transform:   rotate(5deg);
+
+    15% {
+        transform: rotate(5deg);
 
     }
-    30%{
-        transform:   rotate(-5deg);
+
+    30% {
+        transform: rotate(-5deg);
 
     }
-    45%{
-        transform:   rotate(5deg);
+
+    45% {
+        transform: rotate(5deg);
 
     }
-    60%{
-        transform:  rotate(0deg);
+
+    60% {
+        transform: rotate(0deg);
     }
 }
 
-.gradient{
+.gradient {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -269,42 +273,42 @@ h3 {
     pointer-events: none;
 }
 
-.flecheUp{
+.flecheUp {
     cursor: pointer;
     transition: all 0.5s;
 }
 
 
 
-.flecheUp img{
+.flecheUp img {
     width: 40px;
     transition: all 0.5s;
 
 }
 
-.flecheUp:hover img{
+.flecheUp:hover img {
     width: 60px;
 }
 
-.flecheDown{
+.flecheDown {
     rotate: 180deg;
     cursor: pointer;
 
 }
 
 
-.flecheDown img{
+.flecheDown img {
     width: 40px;
     transition: all 0.5s;
 
 }
 
 
-.flecheDown:hover img{
+.flecheDown:hover img {
     width: 60px;
 }
 
-.boutons{
+.boutons {
     height: 80%;
     width: 60px;
     position: relative;
@@ -316,7 +320,7 @@ h3 {
     justify-content: space-evenly;
 }
 
-.bouton{
+.bouton {
     border-radius: 100%;
     background-color: black;
     opacity: 0.3;
@@ -325,13 +329,13 @@ h3 {
     transition: all 0.5s;
 }
 
-.mainBouton{
+.mainBouton {
     opacity: 1;
     width: 15px;
     height: 15px;
 }
 
-.text{
+.text {
     font-size: 30px;
     margin-right: 5rem;
 }
@@ -349,7 +353,7 @@ h3 {
     z-index: 4;
 }
 
-.transition-content{
+.transition-content {
     position: absolute;
     width: 50vw;
     left: 50%;
@@ -371,11 +375,11 @@ h3 {
     transition: all 1s;
     pointer-events: none;
     z-index: 4;
-    background-image:linear-gradient(transparent, transparent 3px, #262f25);
-    background-size:4px 4px;
+    background-image: linear-gradient(transparent, transparent 3px, #262f25);
+    background-size: 4px 4px;
 }
 
-.mobile{
+.mobile {
     position: absolute;
     top: 0;
     left: 0;
@@ -404,15 +408,107 @@ h3 {
     margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 800px){
-    .mobile{
-        pointer-events: none;
+@media screen and (max-width: 800px) {
+
+    #Scene {
+        height: unset;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .top {
+        justify-content: center;
+    }
+
+    .titre {
+        justify-content: center;
+    }
+
+    .titre h1 {
+        flex-wrap: wrap;
+        width: 70%;
+        justify-content: center;
+    }
+
+    .deco-header {
         display: none;
+    }
+
+    .deco-title {
+        display: none;
+    }
+
+    .transition-content {
+        width: 85vw;
+        text-align: center;
+    }
+
+
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .museum-wrapper {
+        flex-direction: column;
+    }
+
+    .content .museum-wrapper .boutons {
+        flex-direction: row;
+        width: unset;
+        top: unset;
+        transform: unset;
+    }
+
+    .museum-wrapper .boutons .flecheUp {
+        rotate: -90deg;
+    }
+
+    .museum-wrapper .boutons .flecheUp:hover img {
+        width: 40px;
+    }
+
+    .museum-wrapper .boutons .flecheDown {
+        rotate: 90deg;
+    }
+
+    .museum-wrapper .boutons .flecheDown:hover img {
+        width: 40px;
+    }
+
+    .museum {
+        width: 86vw;
+        height: 12rem;
+    }
+
+    .content .text {
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+
+    .gradient {
+        background: linear-gradient(90deg, #ffffff, transparent, transparent, #ffffff);
+
+    }
+
+    .cadre {
+        width: 26vw;
+        height: 11vh;
+    }
+
+    h3 {
+        font-size: 3vh;
+    }
+
+    .nextPage {
+        width: auto;
     }
 }
 
 .hiddenTop {
-    transform: translateY(200vw);
+    transform: translateY(200vh);
     pointer-events: none;
 }
 
@@ -422,7 +518,7 @@ h3 {
 }
 
 .hiddenBottom {
-    transform: translateY(-200vw);
+    transform: translateY(-200vh);
     pointer-events: none;
 }
 
@@ -436,7 +532,7 @@ h3 {
     pointer-events: none;
 }
 
-.hiddenMuseum{
+.hiddenMuseum {
     opacity: 0;
     transform: translateY(-20vh);
 }

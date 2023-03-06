@@ -22,7 +22,7 @@ body {
 }
 
 
-.top{
+.top {
   position: relative;
   display: flex;
   height: 10%;
@@ -33,7 +33,7 @@ body {
   align-items: center;
 }
 
-.deco-header{
+.deco-header {
   width: 50%;
   margin-right: 3rem;
   margin-right: 5rem;
@@ -41,33 +41,33 @@ body {
   opacity: 0;
 }
 
-.heure{
+.heure {
   margin-right: 1rem;
 }
 
-.titre{
+.titre {
   display: flex;
   align-items: center;
   margin-left: 1rem;
   min-width: 360px;
 }
 
-.titre .deco-title{
+.titre .deco-title {
   position: relative;
   height: 3rem;
   top: 0.2rem;
   left: 0.2rem;
-  
+
 }
 
 
 
-.titre h1{
+.titre h1 {
   display: flex;
   align-items: center;
 }
 
-.titre h1 span:nth-child(1){
+.titre h1 span:nth-child(1) {
   font-family: "Basquiat";
   font-weight: lighter;
   margin: 0;
@@ -76,7 +76,7 @@ body {
 
 }
 
-.titre h1 span:nth-child(2){
+.titre h1 span:nth-child(2) {
   font-family: "Luam";
   font-weight: lighter;
   margin: 0;
@@ -92,8 +92,8 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background-image:linear-gradient(transparent, transparent 3px, #122510);
-  background-size:4px 4px;
+  background-image: linear-gradient(transparent, transparent 3px, #122510);
+  background-size: 4px 4px;
 
 }
 
@@ -201,30 +201,34 @@ canvas {
   animation-direction: forward;
 }
 
-@keyframes text-wiggle{
-  0%{
-      transform:   translate(-50%, -20vh) rotate(0deg);
+@keyframes text-wiggle {
+  0% {
+    transform: translate(-50%, -20vh) rotate(0deg);
   }
-  15%{
-      transform:   translate(-50%, -20vh) rotate(5deg);
+
+  15% {
+    transform: translate(-50%, -20vh) rotate(5deg);
 
   }
-  30%{
-      transform:   translate(-50%, -20vh) rotate(-5deg);
+
+  30% {
+    transform: translate(-50%, -20vh) rotate(-5deg);
 
   }
-  45%{
-      transform:   translate(-50%, -20vh) rotate(5deg);
+
+  45% {
+    transform: translate(-50%, -20vh) rotate(5deg);
 
   }
-  60%{
-      transform:  translate(-50%, -20vh) rotate(0deg);
+
+  60% {
+    transform: translate(-50%, -20vh) rotate(0deg);
   }
 }
 
-svg{
-  width: 100%; 
-  height: 100vh; 
+svg {
+  width: 100%;
+  height: 100vh;
   display: block;
 }
 
@@ -238,8 +242,8 @@ svg{
   opacity: 1;
   left: 0;
   z-index: 4;
-  background-image:linear-gradient(transparent, transparent 3px, #262f25);
-  background-size:4px 4px;
+  background-image: linear-gradient(transparent, transparent 3px, #262f25);
+  background-size: 4px 4px;
 }
 
 .transition-content {
@@ -272,7 +276,7 @@ svg{
   z-index: 4;
 }
 
-.mobile{
+.mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -301,15 +305,103 @@ svg{
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 800px){
-  .mobile{
-      pointer-events: none;
-      display: none;
+@media screen and (max-width: 800px) {
+
+  html,
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .top {
+    justify-content: center;
+  }
+
+  .titre {
+    justify-content: center;
+  }
+
+  .titre h1 {
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .heure {
+    display: none;
+  }
+
+  .deco-title {
+    display: none;
+  }
+
+
+  .competences {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .competence1 {
+    margin-top: 10rem;
+  }
+
+  .competence8 {
+    margin-bottom: 5rem;
+  }
+
+  .transition-content {
+    width: 90vw;
+    font-size: 20px;
+  }
+
+  .nextPage {
+    top: 0;
+    left: 0;
+    transform: none;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15vh;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes text-wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    15% {
+      transform: rotate(5deg);
+
+    }
+
+    30% {
+      transform: rotate(-5deg);
+
+    }
+
+    45% {
+      transform: rotate(5deg);
+
+    }
+
+    60% {
+      transform: rotate(0deg);
+    }
   }
 }
 
 .hiddenTop {
-  transform: translateY(200vw);
+  transform: translateY(200vh);
   pointer-events: none;
 }
 
@@ -319,7 +411,7 @@ svg{
 }
 
 .hiddenBottom {
-  transform: translateY(-200vw);
+  transform: translateY(-200vh);
   pointer-events: none;
 }
 
