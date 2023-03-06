@@ -45,16 +45,19 @@ function windowDiag() {
 
 function mobileTextHandler(compSelector) {
     const comp = document.querySelector(compSelector + " .titre");
-    var rect = comp.getBoundingClientRect();
-    let details = document.querySelector(compSelector + " .details p")
+    if (comp != null) {
+        var rect = comp.getBoundingClientRect();
+        let details = document.querySelector(compSelector + " .details p")
 
-    if( 165 < rect.top && rect.top < 300){
-        details.classList.remove("hidden")
-        details.classList.add("main")
-    }else{
-        details.classList.add("hidden")
-        details.classList.remove("main")
+        if (165 < rect.top && rect.top < 500) {
+            details.classList.remove("hidden")
+            details.classList.add("main")
+        } else {
+            details.classList.add("hidden")
+            details.classList.remove("main")
+        }
     }
+
 }
 
 

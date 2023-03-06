@@ -80,15 +80,20 @@ function animate() {
   requestAnimationFrame(animate);
 
   if (window.matchMedia("(max-width: 800px)").matches) {
-    let elementToFollow = document.querySelector(".details .main").getBoundingClientRect()
+    let element = document.querySelector(".details .main")
 
-    target.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
-    target.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
-    target.z = camera.position.z + 600;
+    if (element != null) {
+      let elementToFollow = element.getBoundingClientRect()
 
-    target2.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
-    target2.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
-    target2.z = camera.position.z + 14000;
+      target.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
+      target.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
+      target.z = camera.position.z + 600;
+
+      target2.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
+      target2.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
+      target2.z = camera.position.z + 14000;
+    }
+
   } else {
     target.x += (mouseX - target.x) * .05;
     target.y += (- mouseY - target.y) * .05;
