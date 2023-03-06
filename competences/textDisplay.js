@@ -5,22 +5,58 @@ const maxSize = 24;
 const minSize = -5;
 const amplSize = maxSize - minSize;
 
+animate();
+function animate() {
+
+    mobileTextHandler(".competence1")
+    mobileTextHandler(".competence2")
+    mobileTextHandler(".competence3")
+    mobileTextHandler(".competence4")
+    mobileTextHandler(".competence5")
+    mobileTextHandler(".competence6")
+    mobileTextHandler(".competence7")
+    mobileTextHandler(".competence8")  //300 a 165
+    requestAnimationFrame(animate);
+}
+
 
 document.addEventListener('mousemove', event => {
     //DIST MOUSE / ELEMENT LEFT AND RIGHT
-    objectTransform(".competence1");
-    objectTransform(".competence2");
-    objectTransform(".competence3");
-    objectTransform(".competence4");
-    objectTransform(".competence5");
-    objectTransform(".competence6");
-    objectTransform(".competence7");
-    objectTransform(".competence8");
+    if (window.matchMedia("(max-width: 800px)").matches) {
+
+    } else {
+        objectTransform(".competence1");
+        objectTransform(".competence2");
+        objectTransform(".competence3");
+        objectTransform(".competence4");
+        objectTransform(".competence5");
+        objectTransform(".competence6");
+        objectTransform(".competence7");
+        objectTransform(".competence8");
+    }
+
 })
+
+
 
 function windowDiag() {
     return Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)) / 2;
 }
+
+function mobileTextHandler(compSelector) {
+    const comp = document.querySelector(compSelector + " .titre");
+    var rect = comp.getBoundingClientRect();
+    let details = document.querySelector(compSelector + " .details p")
+
+    if( 165 < rect.top && rect.top < 300){
+        details.classList.remove("hidden")
+        details.classList.add("main")
+    }else{
+        details.classList.add("hidden")
+        details.classList.remove("main")
+    }
+}
+
 
 function objectTransform(compSelector) {
     const comp = document.querySelector(compSelector + " .titre");

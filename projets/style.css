@@ -434,6 +434,10 @@ h3 {
         display: none;
     }
 
+    .deco-title {
+        display: none;
+    }
+
     .transition-content {
         width: 85vw;
         text-align: center;
@@ -460,7 +464,7 @@ h3 {
         rotate: -90deg;
     }
 
-    .museum-wrapper .boutons .flecheUp:hover img{
+    .museum-wrapper .boutons .flecheUp:hover img {
         width: 40px;
     }
 
@@ -468,11 +472,11 @@ h3 {
         rotate: 90deg;
     }
 
-    .museum-wrapper .boutons .flecheDown:hover img{
+    .museum-wrapper .boutons .flecheDown:hover img {
         width: 40px;
     }
 
-    .museum{
+    .museum {
         width: 86vw;
         height: 12rem;
     }
@@ -484,21 +488,21 @@ h3 {
         text-align: center;
     }
 
-    .gradient{
+    .gradient {
         background: linear-gradient(90deg, #ffffff, transparent, transparent, #ffffff);
-        
+
     }
 
-    .cadre{
+    .cadre {
         width: 26vw;
         height: 11vh;
     }
 
-    h3{
+    h3 {
         font-size: 3vh;
     }
 
-    .nextPage{
+    .nextPage {
         width: auto;
     }
 }

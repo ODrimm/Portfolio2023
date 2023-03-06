@@ -312,6 +312,10 @@ body {
         display: none;
     }
 
+    .deco-title {
+        display: none;
+    }
+
     #circle {
         width: 500vw;
         height: 500vh;
@@ -343,7 +347,7 @@ body {
         font-size: 40px;
     }
 
-    .nextPage{
+    .nextPage {
         margin-left: 7rem;
     }
 

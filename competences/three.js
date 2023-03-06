@@ -24,6 +24,10 @@ effect.domElement.style.left = '0';
 effect.domElement.style.zIndex = '-1';
 effect.domElement.style.opacity = '1';
 effect.domElement.style.textShadow = '0 0 7px #00ff00';
+if (window.matchMedia("(max-width: 800px)").matches) {
+  effect.domElement.style.color = '#005500';
+
+}
 
 effect.render(scene, camera);
 
@@ -75,13 +79,26 @@ function animate() {
 
   requestAnimationFrame(animate);
 
-  target.x += (mouseX - target.x) * .05;
-  target.y += (- mouseY - target.y) * .05;
-  target.z = camera.position.z + 600;
+  if (window.matchMedia("(max-width: 800px)").matches) {
+    let elementToFollow = document.querySelector(".details .main").getBoundingClientRect()
 
-  target2.x += (mouseX - target.x) * .05;
-  target2.y += (- mouseY - target.y) * .05;
-  target2.z = camera.position.z + 14000;
+    target.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
+    target.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
+    target.z = camera.position.z + 600;
+
+    target2.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
+    target2.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
+    target2.z = camera.position.z + 14000;
+  } else {
+    target.x += (mouseX - target.x) * .05;
+    target.y += (- mouseY - target.y) * .05;
+    target.z = camera.position.z + 600;
+
+    target2.x += (mouseX - target.x) * .05;
+    target2.y += (- mouseY - target.y) * .05;
+    target2.z = camera.position.z + 14000;
+  }
+
 
   if (eye != null && eyelid != null) {
     eye.lookAt(target);
