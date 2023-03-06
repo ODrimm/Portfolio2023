@@ -294,23 +294,53 @@ body {
 
 @media screen and (max-width: 800px) {
 
-    .top{
+    .top {
         justify-content: center;
     }
 
-    .titre{
+    .titre {
         justify-content: center;
     }
 
-    .titre h1{
+    .titre h1 {
         flex-wrap: wrap;
         width: 70%;
         justify-content: center;
     }
 
-    .deco-header{
+    .deco-header {
         display: none;
     }
+
+    #circle{
+        width: 500vw;
+        height: 500vh;
+    }
+
+
+
+    .overlay .text {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10rem;
+    }
+
+    .overlay .text .deco-text{
+        left: 2.5rem;
+    }
+
+    .overlay .text .deco-text-fill{
+        left: 2.5rem;
+    }
+
+    .overlay .text:hover .main-txt1{
+        font-size: 35px;
+    }
+
+    .overlay .text:hover .main-txt2{
+        font-size: 40px;
+    }
+
 }
 
 
