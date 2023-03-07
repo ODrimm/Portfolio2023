@@ -8,9 +8,15 @@ setTimeout(() => {
     transition.classList.toggle("hiddenBottom")
 }, 500);
 
-setTimeout(() => {    
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     nextPage.classList.remove("hiddenRight")
-}, 5000);
+
+}else{
+    setTimeout(() => {    
+        nextPage.classList.remove("hiddenRight")
+    }, 5000);
+}
+
 
 addEventListener("click", (event) => {
     nextPage.classList.remove("hiddenRight")

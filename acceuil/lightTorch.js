@@ -1,6 +1,6 @@
 const circle = document.getElementById("circle");
 
-if (window.matchMedia("(max-width: 800px)").matches) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
 }
 else{

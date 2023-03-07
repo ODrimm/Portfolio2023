@@ -292,6 +292,17 @@ body {
     margin-bottom: 2rem;
 }
 
+@media screen and (hover: none) {
+
+    #circle {
+        width: 500vw;
+        height: 500vh;
+        left: 80vw;
+        top: 20vh;
+    }
+
+}
+
 @media screen and (max-width: 800px) {
 
     .top {
@@ -316,19 +327,12 @@ body {
         display: none;
     }
 
-    #circle {
-        width: 500vw;
-        height: 500vh;
-        left: 357px;
-        top: 232px;
-    }
-
-
-
     .overlay .text {
         text-align: center;
         margin-left: 0;
         margin-top: 10rem;
+        min-width: 425px;
+        width: 100%;
     }
 
     .overlay .text .deco-text {
