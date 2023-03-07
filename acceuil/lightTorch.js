@@ -1,23 +1,12 @@
-const circle = document.getElementById("circle");
+const circle = document.getElementById("circle"); //get circle div
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if is mobile device
 
-}
-else{
-  const onMouseMove = (e) => {
-    circle.style.left = e.pageX + 'px';
-    circle.style.top = e.pageY + 'px';
+  const onMouseMove = (e) => { //move circle to cursor position
+    circle.style.transform = "translate(" + e.pageX + "px," +  e.pageY + "px";
   }
-  
-  document.addEventListener('mousemove', onMouseMove);
-  
-  function getOffset(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-      left: rect.left + window.scrollX,
-      top: rect.top + window.scrollY
-    };
-  }
+
+  document.addEventListener('mousemove', onMouseMove); //mouve on mouse mov
 }
 
 

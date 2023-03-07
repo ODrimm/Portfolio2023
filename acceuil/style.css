@@ -30,12 +30,13 @@ body {
     position: absolute;
     width: 200vw;
     height: 200vw;
-    transform: translate(-50%, -52%);
+    top: -105vw;
+    left: -100vw;
     background-image: radial-gradient(rgba(33, 33, 33, 0.277) 2%, rgba(49, 49, 49, 0.353) 3%, black 10%);
     transition: all, 0.05s;
 }
 
-#Scene1 {
+.wrapper {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -297,8 +298,8 @@ body {
     #circle {
         width: 500vw;
         height: 500vh;
-        left: 80vw;
-        top: 20vh;
+        left: -165vw;
+        top: -225vh;
     }
 
 }

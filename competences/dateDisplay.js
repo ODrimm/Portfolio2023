@@ -1,15 +1,15 @@
 ////////////////////////////////////// DATE DISPLAY \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-dateDisplay = document.querySelector(".heure")
 
-if (window.matchMedia("(max-width: 800px)").matches) {
+let hourDisplay = document.querySelector(".hour") //get where to display hour
 
-}else{
-    setInterval(function() {
+if (!window.matchMedia("(max-width: 800px)").matches) { //if not mobile device
+
+    setInterval(function() { //each second update hour display
+
         var today = new Date();
-    
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    
-        dateDisplay.innerHTML = time;
+        hourDisplay.innerHTML = time;
+
     },1000)
 }
 

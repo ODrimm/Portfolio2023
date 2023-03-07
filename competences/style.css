@@ -42,18 +42,18 @@ body {
   opacity: 0;
 }
 
-.heure {
+.hour {
   margin-right: 1rem;
 }
 
-.titre {
+.title {
   display: flex;
   align-items: center;
   margin-left: 1rem;
   min-width: 360px;
 }
 
-.titre .deco-title {
+.title .deco-title {
   position: relative;
   height: 3rem;
   top: 0.2rem;
@@ -63,12 +63,12 @@ body {
 
 
 
-.titre h1 {
+.title h1 {
   display: flex;
   align-items: center;
 }
 
-.titre h1 span:nth-child(1) {
+.title h1 span:nth-child(1) {
   font-family: "Basquiat";
   font-weight: lighter;
   margin: 0;
@@ -77,7 +77,7 @@ body {
 
 }
 
-.titre h1 span:nth-child(2) {
+.title h1 span:nth-child(2) {
   font-family: "Luam";
   font-weight: lighter;
   margin: 0;
@@ -108,7 +108,7 @@ canvas {
   height: 120%;
 }
 
-.competences {
+.skills {
   position: absolute;
   color: hsl(120, 96%, 63%);
   z-index: 2;
@@ -116,52 +116,52 @@ canvas {
 }
 
 
-.competence1 {
+.skill1 {
   top: 30rem;
   left: 12vw;
 }
 
-.competence2 {
+.skill2 {
   top: 25rem;
   left: 80vw;
 }
 
-.competence3 {
+.skill3 {
   top: 18rem;
   left: 10vw;
 }
 
-.competence4 {
+.skill4 {
   top: 10rem;
   left: 20vw;
 }
 
-.competence5 {
+.skill5 {
   top: 10rem;
   left: 70vw;
 }
 
-.competence6 {
+.skill6 {
   top: 80vh;
   left: 30vw;
 }
 
-.competence7 {
+.skill7 {
   top: 80vh;
   left: 60vw;
 }
 
-.competence8 {
+.skill8 {
   top: 10vh;
   left: 42vw;
 }
 
-.competences .titre {
+.skills .title {
   margin: 0;
   transition: opacity 0.5s;
 }
 
-.competences:hover .titre {
+.skills:hover .title {
   transition: all 0.3s;
 }
 
@@ -320,11 +320,11 @@ svg {
     overflow-y: scroll;
   }
 
-  .titre {
+  .title {
     justify-content: center;
   }
 
-  .competences {
+  .skills {
     position: relative;
     top: 0;
     left: 0;
@@ -332,11 +332,11 @@ svg {
     margin-top: 5rem;
   }
 
-  .competence1 {
+  .skill1 {
     margin-top: 10rem;
   }
 
-  .competence8 {
+  .skill8 {
     margin-bottom: 5rem;
   }
 
@@ -395,17 +395,17 @@ svg {
     justify-content: center;
   }
 
-  .titre {
+  .title {
     justify-content: center;
   }
 
-  .titre h1 {
+  .title h1 {
     flex-wrap: wrap;
     width: 70%;
     justify-content: center;
   }
 
-  .heure {
+  .hour {
     display: none;
   }
 

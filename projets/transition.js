@@ -8,25 +8,25 @@ for(let i = 0; i < museumSection.length; i++){
     museumSection[i].classList.remove("hiddenMuseum")
 }
 
-
 function closeTransition(){
+
     transition.style.transition = "all 3s";
     transition.classList.add("hiddenTop")
 
     if (window.matchMedia("(max-width: 800px)").matches) {
+
         nextPage.classList.remove("hiddenOpacity")
+        
     }else{
         setTimeout(() => {    
             nextPage.classList.remove("hiddenOpacity")
         }, 5000);
     }
-    
 }
 
 addEventListener("click", (event) => {
     nextPage.classList.remove("hiddenOpacity")
 });
-
 
 setTimeout(() => {    
     transitionContent.classList.remove("hiddenOpacity")
