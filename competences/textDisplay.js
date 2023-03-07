@@ -6,7 +6,7 @@ const minSize = -5;
 const amplSize = maxSize - minSize;
 
 
-if (window.matchMedia("(max-width: 800px)").matches) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     animate();
 }
 
@@ -20,7 +20,7 @@ function animate() {
     mobileTextHandler(".competence6")
     mobileTextHandler(".competence7")
     mobileTextHandler(".competence8")  //300 a 165
-    if (window.matchMedia("(max-width: 800px)").matches) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         requestAnimationFrame(animate);
     }
 }
@@ -28,7 +28,7 @@ function animate() {
 
 document.addEventListener('mousemove', event => {
     //DIST MOUSE / ELEMENT LEFT AND RIGHT
-    if (window.matchMedia("(max-width: 800px)").matches) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
     } else {
         objectTransform(".competence1");

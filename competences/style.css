@@ -308,7 +308,7 @@ svg {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (hover: none){
 
   html,
   body {
@@ -320,28 +320,9 @@ svg {
     overflow-y: scroll;
   }
 
-  .top {
-    justify-content: center;
-  }
-
   .titre {
     justify-content: center;
   }
-
-  .titre h1 {
-    flex-wrap: wrap;
-    width: 70%;
-    justify-content: center;
-  }
-
-  .heure {
-    display: none;
-  }
-
-  .deco-title {
-    display: none;
-  }
-
 
   .competences {
     position: relative;
@@ -357,11 +338,6 @@ svg {
 
   .competence8 {
     margin-bottom: 5rem;
-  }
-
-  .transition-content {
-    width: 90vw;
-    font-size: 20px;
   }
 
   .nextPage {
@@ -400,6 +376,46 @@ svg {
     60% {
       transform: rotate(0deg);
     }
+  }
+}
+
+@media screen and (max-width: 800px){
+
+  html,
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .top {
+    justify-content: center;
+  }
+
+  .titre {
+    justify-content: center;
+  }
+
+  .titre h1 {
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .heure {
+    display: none;
+  }
+
+  .deco-title {
+    display: none;
+  }
+
+  .transition-content {
+    width: 90vw;
+    font-size: 20px;
   }
 }
 

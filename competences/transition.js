@@ -13,7 +13,7 @@ function closeTransition() {
 
     transition.classList.add("hiddenOpacity")
     
-    if (window.matchMedia("(max-width: 800px)").matches) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         nextPage.classList.remove("hiddenTop")
 
     }else{

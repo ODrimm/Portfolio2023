@@ -14,15 +14,6 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-addEventListener("resize", (event) => {
-  scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  effect.render(scene, camera);
-
-});
-
 camera.position.setZ(0);
 
 const effect = new AsciiEffect(renderer, ' .#', { invert: true });
@@ -37,7 +28,7 @@ effect.domElement.style.opacity = '1';
 effect.domElement.style.textShadow = '0 0 7px #00ff00';
 effect.domElement.style.backgroundImage = "linear-gradient(transparent, transparent 3px, #122510)";
 effect.domElement.style.backgroundSize = "4px 4px";
-if (window.matchMedia("(max-width: 800px)").matches) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   effect.domElement.style.color = '#005500';
 
 }
@@ -92,17 +83,17 @@ function animate() {
 
   requestAnimationFrame(animate);
 
-  if (window.matchMedia("(max-width: 800px)").matches) {
-    let element = document.querySelector(".details .main")
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    let element = document.querySelector(".competence5")
 
     if (element != null) {
       let elementToFollow = element.getBoundingClientRect()
 
-      target.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
+      target.x += ((elementToFollow.left) - target.x) * .05;
       target.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
       target.z = camera.position.z + 600;
 
-      target2.x += ((elementToFollow.left - windowHalfX / 2) - target.x) * .05;
+      target2.x += ((elementToFollow.left) - target.x) * .05;
       target2.y += (- (elementToFollow.top - windowHalfY) - target.y) * .05;
       target2.z = camera.position.z + 14000;
     }
