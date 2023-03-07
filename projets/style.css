@@ -447,10 +447,12 @@ h3 {
 
     .content {
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .content .museum-wrapper {
         flex-direction: column;
+        height: unset;
     }
 
     .content .museum-wrapper .boutons {
@@ -458,6 +460,7 @@ h3 {
         width: unset;
         top: unset;
         transform: unset;
+        height: unset;
     }
 
     .museum-wrapper .boutons .flecheUp {
@@ -483,9 +486,8 @@ h3 {
 
     .content .text {
         margin: 0;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .gradient {
@@ -504,6 +506,8 @@ h3 {
 
     .nextPage {
         width: auto;
+        text-align: center;
+
     }
 }
 
