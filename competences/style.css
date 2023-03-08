@@ -106,6 +106,7 @@ canvas {
   overflow: hidden;
   z-index: 1;
   height: 120%;
+  pointer-events: none;
 }
 
 .skills {

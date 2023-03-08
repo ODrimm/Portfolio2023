@@ -31,21 +31,13 @@ effect.domElement.style.opacity = '1';
 effect.domElement.style.textShadow = '0 0 7px #00ff00';
 effect.domElement.style.backgroundImage = "linear-gradient(transparent, transparent 3px, #122510)";
 effect.domElement.style.backgroundSize = "4px 4px";
+effect.domElement.style.pointerEvents = "none";
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if mobile device font is darker
   effect.domElement.style.color = '#005500';
 }
 
 effect.render(scene, camera);
-
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.noPan = true;
-controls.noKeys = true;
-controls.noRotate = true;
-controls.noZoom = true;
-controls.update();
-
-
 
 let eye;
 loader.load("../Assets/3D/eye.gltf", function (gltf) { //load eye model
@@ -107,7 +99,7 @@ function animate() {
 
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {//if mobile
 
-    let element = document.querySelector(".competence5")
+    let element = document.querySelector(".skill5")
 
     if (element != null) { //eye follow middle comp
 
@@ -142,7 +134,6 @@ function animate() {
 
   }
 
-  controls.update();
   effect.render(scene, camera); //render
 
 }
