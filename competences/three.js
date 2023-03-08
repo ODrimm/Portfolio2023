@@ -3,9 +3,11 @@ import { Vector3 } from 'three';
 import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+
 const scene = new THREE.Scene(); //declare scene elements
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const loader = new GLTFLoader();
+
 
 const renderer = new THREE.WebGLRenderer({ //render on canvas
   canvas: document.querySelector('#canvas'),
@@ -78,6 +80,7 @@ document.addEventListener('mousemove', event => { //set variables to mousepos
 
 document.body.appendChild(effect.domElement); //create ascii in dom
 
+
 function animate() {
 
   requestAnimationFrame(animate);
@@ -122,4 +125,5 @@ function animate() {
   effect.render(scene, camera); //render
 
 }
+
 animate()

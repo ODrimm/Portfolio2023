@@ -122,7 +122,7 @@ canvas {
 }
 
 .skill2 {
-  top: 25rem;
+  top: 30rem;
   left: 80vw;
 }
 
@@ -143,17 +143,27 @@ canvas {
 
 .skill6 {
   top: 80vh;
-  left: 30vw;
+  left: 23vw;
 }
 
 .skill7 {
   top: 80vh;
-  left: 60vw;
+  left: 47vw;
 }
 
 .skill8 {
   top: 10vh;
   left: 42vw;
+}
+
+.skill9 {
+  top: 19rem;
+  left: 75vw;
+}
+
+.skill10 {
+  top: 36rem;
+    left: 74vw;
 }
 
 .skills .title {
@@ -308,7 +318,7 @@ svg {
   margin-bottom: 2rem;
 }
 
-@media screen and (hover: none){
+@media screen and (hover: none) {
 
   html,
   body {
@@ -336,7 +346,7 @@ svg {
     margin-top: 10rem;
   }
 
-  .skill8 {
+  .skill10 {
     margin-bottom: 5rem;
   }
 
@@ -379,7 +389,7 @@ svg {
   }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
 
   html,
   body {

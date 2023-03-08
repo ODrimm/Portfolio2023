@@ -5,9 +5,26 @@ const maxSize = 24;
 const minSize = -5;
 const amplSize = maxSize - minSize;
 
+const onMouseMove = (event) => {
+    
+    objectTransform(".skill1");
+    objectTransform(".skill2");
+    objectTransform(".skill3");
+    objectTransform(".skill4");
+    objectTransform(".skill5");
+    objectTransform(".skill6");
+    objectTransform(".skill7");
+    objectTransform(".skill8");
+    objectTransform(".skill9");
+    objectTransform(".skill10");
+}
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if mobile
     animate();
+    document.removeEventListener('mousemove', onMouseMove);
+
+} else {
+    document.addEventListener('mousemove', onMouseMove);
 }
 
 function animate() {
@@ -19,30 +36,21 @@ function animate() {
     mobileTextHandler(".skill5")
     mobileTextHandler(".skill6")
     mobileTextHandler(".skill7")
-    mobileTextHandler(".skill8")  
+    mobileTextHandler(".skill8")
+    mobileTextHandler(".skill9")
+    mobileTextHandler(".skill10")
+
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if mobile
         requestAnimationFrame(animate);
     }
 }
 
 
-document.addEventListener('mousemove', event => {
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if desktop
-        objectTransform(".skill1");
-        objectTransform(".skill2");
-        objectTransform(".skill3");
-        objectTransform(".skill4");
-        objectTransform(".skill5");
-        objectTransform(".skill6");
-        objectTransform(".skill7");
-        objectTransform(".skill8");
-    }
-})
 
 
 
 function windowDiag() { // get size of window diagonal
-    return Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)) / 2; 
+    return Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)) / 2;
 }
 
 function mobileTextHandler(compSelector) { //skill detail appear when in middle of screen
@@ -64,7 +72,7 @@ function mobileTextHandler(compSelector) { //skill detail appear when in middle 
 }
 
 
-function objectTransform(compSelector) { 
+function objectTransform(compSelector) {
 
     const comp = document.querySelector(compSelector + " .title"); //get size and pos of element
     var rect = comp.getBoundingClientRect();
@@ -89,7 +97,7 @@ function objectTransform(compSelector) {
         comp.style.transform = "translateX(0px) translateY(0px)" //get back to original pos
 
     } else { //when element isn't hovered
-        
+
         let details = document.querySelectorAll(compSelector + " .details p")
         for (let i = 0; i < details.length; i++) {
             details[i].classList.add("hidden") //make details invisible
@@ -99,7 +107,7 @@ function objectTransform(compSelector) {
         comp.style.transform = "translateX(" + (-distXL / 10) * 1.9 + "px) translateY(" + (-distY / 10) * 1.5 + "px)" //move to desired pos
     }
 
-    
+
     let percentDiag = (dist * 100) / windowDiag(); //apply font size depending on distance
     let fontSize = maxSize - ((percentDiag * amplSize) / 100);
     comp.style.fontSize = fontSize + "px"
