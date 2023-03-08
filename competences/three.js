@@ -4,8 +4,6 @@ import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-
-
 const scene = new THREE.Scene(); //declare scene elements
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const loader = new GLTFLoader();
