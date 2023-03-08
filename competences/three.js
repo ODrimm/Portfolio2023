@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { Vector3 } from 'three';
 import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 
 
 const scene = new THREE.Scene(); //declare scene elements
@@ -35,6 +37,15 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 effect.render(scene, camera);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.noPan = true;
+controls.noKeys = true;
+controls.noRotate = true;
+controls.noZoom = true;
+controls.update();
+
+
 
 let eye;
 loader.load("../Assets/3D/eye.gltf", function (gltf) { //load eye model
@@ -80,6 +91,15 @@ document.addEventListener('mousemove', event => { //set variables to mousepos
 
 document.body.appendChild(effect.domElement); //create ascii in dom
 
+window.addEventListener('resize', onWindowResize, false);
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  effect.setSize(window.innerWidth, window.innerHeight);
+
+}
 
 function animate() {
 
@@ -122,6 +142,7 @@ function animate() {
 
   }
 
+  controls.update();
   effect.render(scene, camera); //render
 
 }
