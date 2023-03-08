@@ -8,7 +8,6 @@ const scene = new THREE.Scene(); //declare scene elements
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const loader = new GLTFLoader();
 
-
 const renderer = new THREE.WebGLRenderer({ //render on canvas
   canvas: document.querySelector('#canvas'),
 });
@@ -129,6 +128,12 @@ function animate() {
 
     eye.lookAt(target);
     eyelid.lookAt(target2);
+
+    // gsap.to(camera.position,{
+    //   duration: 1,
+    //   z: 40
+
+    // })
 
   }
 
