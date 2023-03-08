@@ -412,8 +412,6 @@ h3 {
 
     #Scene {
         height: unset;
-        overflow-x: hidden;
-        overflow-y: scroll;
     }
 
     .top {
@@ -448,6 +446,7 @@ h3 {
     .content {
         flex-direction: column;
         justify-content: space-evenly;
+        height: fit-content;
     }
 
     .content .museum-wrapper {
