@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=" description "  content= "Bienvenu sur le site web de Camille Fourcade, étudiant en MMI, développeur indépendant et Artiste Polyvalent.">
+    <meta name=" description "
+        content="Bienvenu sur le site web de Camille Fourcade, étudiant en MMI, développeur indépendant et Artiste Polyvalent.">
 
     <title>Camille Fourcade</title>
     <link rel="stylesheet" href="./acceuil/style.css">
@@ -13,15 +14,25 @@
 
     <script defer src="./acceuil/lightTorch.js"></script>
     <script defer src="./acceuil/transition.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEKELQKKVQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WEKELQKKVQ');
+    </script>
 </head>
 
 <body>
     <section class="wrapper">
-        
+
         <section class="top">
             <section class="titre">
                 <img class="deco-title" src="./Assets/SVG/Line-title.svg"></img>
-                <h1><span>Camille Fourcade -</span><span>  MMI </span><span> Bordeaux</span></h1>
+                <h1><span>Camille Fourcade -</span><span> MMI </span><span> Bordeaux</span></h1>
             </section>
             <img class="deco-header" src="./Assets/SVG/Line Header.svg" alt="">
         </section>
@@ -47,10 +58,10 @@
                     <h3>Qui suis-je ?</h3>
                     <img src="./Assets/SVG/Arrow.svg" alt="">
                 </section>
-    
+
             </section>
         </section>
-        
+
     </section>
     <section class="transition"></section>
 </body>
