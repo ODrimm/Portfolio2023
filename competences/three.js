@@ -66,7 +66,7 @@ loader.load("../Assets/3D/eyelid.gltf", function (gltf) { //load eyelid model
   eyelid = gltf.scene;
   gltf.scene.position.z = -100
   gltf.scene.scale.x = 0.85
-  gltf.scene.scale.y = 0.80
+  gltf.scene.scale.y = 0.85
   scene.add(gltf.scene);
 
   eyelidMixer = new THREE.AnimationMixer(eyelid);
