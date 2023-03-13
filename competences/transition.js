@@ -48,7 +48,7 @@ function changePage(href) {
 }
 
 let i = 0;
-let txt1 = "Après la création, ma deuxième passion : Apprendre. Découvrir des gens, des cultures et des lieux, faire preuve de curiosité, s’apporter de nouveaux outils. Grâce à cette passion, mes connaissances et compétences sont en perpétuelle évolution, alors il vaut mieux"
+let txt1 = "Après la création, ma deuxième passion : Apprendre. Découvrir des gens, des cultures et des lieux. Faire preuve de curiosité, s’apporter de nouveaux outils. Grâce à cette passion, mes connaissances et compétences sont en perpétuelle évolution, alors il vaut mieux"
 let speed = 50;
 
 typeWriter()
@@ -70,7 +70,7 @@ function typeWriter() {
 }
 
 let i2 = 0;
-let txt2 = "Garder un oeil dessus"
+let txt2 = "Garder un œil dessus"
 let speed2 = 25;
 
 function typeWriter2() {
