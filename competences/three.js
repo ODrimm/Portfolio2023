@@ -7,6 +7,8 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 const scene = new THREE.Scene(); //declare scene elements
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const loader = new GLTFLoader();
+const clock = new THREE.Clock();
+const clock2 = new THREE.Clock();
 
 const renderer = new THREE.WebGLRenderer({ //render on canvas
   canvas: document.querySelector('#canvas'),
@@ -37,11 +39,19 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 effect.render(scene, camera);
 
 let eye;
+let eyeMixer;
 loader.load("../Assets/3D/eye.gltf", function (gltf) { //load eye model
 
   eye = gltf.scene;
   gltf.scene.position.z = -100
   scene.add(gltf.scene);
+
+  const clips = gltf.animations;
+  eyeMixer = new THREE.AnimationMixer(eye);
+
+  const clip = THREE.AnimationClip.findByName(clips, 'EyeMov')
+  const action = eyeMixer.clipAction(clip);
+  action.play();
 
 }, undefined, function (error) {
 
@@ -50,11 +60,30 @@ loader.load("../Assets/3D/eye.gltf", function (gltf) { //load eye model
 });
 
 let eyelid;
+let eyelidMixer;
 loader.load("../Assets/3D/eyelid.gltf", function (gltf) { //load eyelid model
 
   eyelid = gltf.scene;
-  gltf.scene.position.z = -120
+  gltf.scene.position.z = -100
+  gltf.scene.scale.x = 0.85
+  gltf.scene.scale.y = 0.80
   scene.add(gltf.scene);
+
+  eyelidMixer = new THREE.AnimationMixer(eyelid);
+  const clips = gltf.animations;
+
+  clips.forEach(function (clip) {
+    const action = eyelidMixer.clipAction(clip);
+    action.play();
+  });
+
+  // const clipMov = THREE.AnimationClip.findByName(clips, 'EyelidMov')
+  // const actionMov = eyelidMixer.clipAction(clipMov);
+  // actionMov.play();
+
+  // const clipOpen = THREE.AnimationClip.findByName(clips, 'KeyAction')
+  // const actionOpen = eyelidMixer.clipAction(clipOpen);
+  // actionOpen.play();
 
 }, undefined, function (error) {
 
@@ -90,7 +119,17 @@ function onWindowResize() {
 
 }
 
+
+
 function animate() {
+
+  if (eyeMixer) {
+    eyeMixer.update(clock.getDelta())
+  }
+
+  if (eyelidMixer) {
+    eyelidMixer.update(clock2.getDelta())
+  }
 
   requestAnimationFrame(animate);
 
