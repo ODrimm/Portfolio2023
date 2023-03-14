@@ -1,26 +1,27 @@
-const transition = document.querySelector(".transition");
-const nextPage = document.querySelector(".nextPage");
+const transition = document.querySelector(".transition"); 
+const nextPage = document.querySelector(".nextPage"); 
 
-
-setTimeout(() => {  
-    transition.style.transition = "all 1s";
-  
+setTimeout(() => {  //transition on page load
+    transition.style.transition = "all 1s"; //make transition after load to avoid bug
     transition.classList.toggle("hiddenBottom")
 }, 500);
 
-setTimeout(() => {    
-    nextPage.classList.remove("hiddenRight")
-}, 5000);
-
-addEventListener("click", (event) => {
-    nextPage.classList.remove("hiddenRight")
-});
-
-
-function changePage(href){
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if on mobile
+    nextPage.classList.remove("hiddenRight") //button directly appear
+}else{
     setTimeout(() => {    
-        location.href = href
+        nextPage.classList.remove("hiddenRight") //else button appear after delay
+    }, 5000);
+
+    addEventListener("click", (event) => { //on click skip delay
+        nextPage.classList.remove("hiddenRight") 
+    });
+}
+
+function changePage(href){ //changepage
+    setTimeout(() => {    
+        location.href = href //load page after delay
     }, 1000);
-    transition.classList.toggle("hiddenBottom")
+    transition.classList.toggle("hiddenBottom") //make transition appear
 }
 

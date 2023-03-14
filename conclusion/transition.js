@@ -7,15 +7,6 @@ setTimeout(() => {
     transition.classList.toggle("hiddenOpacity")
 }, 500);
 
-setTimeout(() => {    
-    //nextPage.classList.remove("hiddenRight")
-}, 5000);
-
-addEventListener("click", (event) => {
-    //nextPage.classList.remove("hiddenRight")
-});
-
-
 function changePage(href){
     setTimeout(() => {    
         location.href = href

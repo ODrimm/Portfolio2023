@@ -155,7 +155,7 @@ a {
 }
 
 .crea-web {
-    background-image: url("../Assets/Images/ava.png");
+    background-image: url("../Assets/Images/creaWeb.png");
 }
 
 .video {
@@ -171,7 +171,7 @@ a {
 }
 
 .dessin {
-    background-image: url("../Assets/Images/dessin.png");
+    background-image: url("../Assets/Images/draw.png");
 }
 
 .anim {
@@ -412,8 +412,6 @@ h3 {
 
     #Scene {
         height: unset;
-        overflow-x: hidden;
-        overflow-y: scroll;
     }
 
     .top {
@@ -439,7 +437,7 @@ h3 {
     }
 
     .transition-content {
-        width: 85vw;
+        width: 80vw;
         text-align: center;
     }
 
@@ -447,10 +445,13 @@ h3 {
 
     .content {
         flex-direction: column;
+        justify-content: space-evenly;
+        height: fit-content;
     }
 
     .content .museum-wrapper {
         flex-direction: column;
+        height: unset;
     }
 
     .content .museum-wrapper .boutons {
@@ -458,6 +459,7 @@ h3 {
         width: unset;
         top: unset;
         transform: unset;
+        height: unset;
     }
 
     .museum-wrapper .boutons .flecheUp {
@@ -483,9 +485,8 @@ h3 {
 
     .content .text {
         margin: 0;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .gradient {
@@ -504,6 +505,8 @@ h3 {
 
     .nextPage {
         width: auto;
+        text-align: center;
+
     }
 }
 

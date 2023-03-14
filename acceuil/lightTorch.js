@@ -1,24 +1,35 @@
-const circle = document.getElementById("circle");
+const circle = document.getElementById("circle"); //get circle div
 
-if (window.matchMedia("(max-width: 800px)").matches) {
+const onMouseMove = (e) => { //move circle to cursor position
+  circle.style.transform = "translate(" + e.pageX + "px," +  e.pageY + "px";
+}
 
-}
-else{
-  const onMouseMove = (e) => {
-    circle.style.left = e.pageX + 'px';
-    circle.style.top = e.pageY + 'px';
-  }
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if is desktop device
+
+  document.addEventListener('mousemove', onMouseMove); //mouve on mouse mov
+
+}else{
+
+  circle.style.transform = "translate(" + 0 + "px," +  0 + "px";
+  document.removeEventListener('mousemove', onMouseMove);
   
-  document.addEventListener('mousemove', onMouseMove);
-  
-  function getOffset(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-      left: rect.left + window.scrollX,
-      top: rect.top + window.scrollY
-    };
-  }
 }
+
+addEventListener("resize", (event) => {
+  if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { //if is desktop device
+
+    document.addEventListener('mousemove', onMouseMove); //mouve on mouse mov
+
+  }else{
+
+    circle.style.transform = "translate(" + 0 + "px," +  0 + "px";
+    document.removeEventListener('mousemove', onMouseMove);
+    
+  }
+});
+
+
+
 
 
 

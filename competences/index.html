@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <title>Camille Fourcade</title>
     <link rel="icon" type="image/x-icon" href="../Assets/Images/favIcon.png">
-    <meta name=" description "  content= "Bienvenu sur le site web de Camille Fourcade, étudiant en MMI, développeur indépendant et Artiste Polyvalent.">
+    <meta name=" description "
+        content="Bienvenu sur le site web de Camille Fourcade, étudiant en MMI, développeur indépendant et Artiste Polyvalent.">
     <script defer type="importmap">
     {
         "imports": {
@@ -19,76 +20,98 @@
     <script defer type="module" src="./three.js"></script>
     <script defer src="./textDisplay.js"></script>
     <script defer src="./dateDisplay.js"></script>
-    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script defer src="./transition.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEKELQKKVQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WEKELQKKVQ');
+    </script>
 </head>
 
 <body>
     <section class="wrapper">
         <section class="top">
-            <section class="titre">
+            <section class="title">
                 <img class="deco-title" src="../Assets/SVG/Line-title.svg"></img>
                 <h1><span>Camille Fourcade -</span><span> MMI Bordeaux</span></h1>
             </section>
-            <section class="heure"></section>
+            <section class="hour"></section>
         </section>
         <canvas id="canvas"></canvas>
-        <section class="competences competence1">
-            <p class="titre">--&gt; JAVASCRIPT &lt;--</p>
+        <section class="skills skill1">
+            <p class="title">--&gt; JAVASCRIPT &lt;--</p>
             <section class="details">
                 <p>Language de programmation web</p>
             </section>
         </section>
-        <section class="competences competence2">
-            <p class="titre">--&gt; HTML &lt;--</p>
+        <section class="skills skill2">
+            <p class="title">--&gt; HTML &lt;--</p>
             <section class="details">
                 <p>Language de balisage web</p>
             </section>
         </section>
-        <section class="competences competence3">
-            <p class="titre">--&gt; CSS &lt;--</p>
+        <section class="skills skill3">
+            <p class="title">--&gt; CSS &lt;--</p>
             <section class="details">
                 <p>Language de stylisation</p>
             </section>
         </section>
-        <section class="competences competence4">
-            <p class="titre">--&gt; GSAP &lt;--</p>
+        <section class="skills skill4">
+            <p class="title">--&gt; GSAP &lt;--</p>
             <section class="details">
                 <p>API d'animation JS</p>
             </section>
         </section>
-        <section class="competences competence5">
-            <p class="titre">--&gt; GIT & GIT KRAKEN &lt;--</p>
+        <section class="skills skill5">
+            <p class="title">--&gt; GIT & GIT KRAKEN &lt;--</p>
             <section class="details">
                 <p>Applis de versioning</p>
             </section>
         </section>
-        <section class="competences competence6">
-            <p class="titre">--&gt; THREE.JS &lt;--</p>
+        <section class="skills skill6">
+            <p class="title">--&gt; THREE.JS &lt;--</p>
             <section class="details">
                 <p>API 3D JS</p>
             </section>
         </section>
-        <section class="competences competence7">
-            <p class="titre">--&gt; REACT / NEXT JS &lt;--</p>
+        <section class="skills skill7">
+            <p class="title">--&gt; REACT / NEXT JS &lt;--</p>
             <section class="details">
                 <p>API de routing JS</p>
             </section>
         </section>
-        <section class="competences competence8">
-            <p class="titre">--&gt; MATTER JS &lt;--</p>
+        <section class="skills skill8">
+            <p class="title">--&gt; MATTER JS &lt;--</p>
             <section class="details">
                 <p>API physique JS</p>
             </section>
         </section>
-        <section class="nextPage hiddenTop" onclick="return changePage('../conclusion');"> 
+        <section class="skills skill9">
+            <p class="title">--&gt; RUBY ON RAILS &lt;--</p>
+            <section class="details">
+                <p>Language dev web</p>
+            </section>
+        </section>
+        <section class="skills skill10">
+            <p class="title">--&gt; C# &lt;--</p>
+            <section class="details">
+                <p>Language orienté objet</p>
+            </section>
+        </section>
+        <section class="nextPage hiddenTop" onclick="return changePage('../conclusion');">
             <p>page suivante</p>
         </section>
     </section>
     <section class="transition">
         <section class="transition-content hiddenOpacity">
             <p class="para1"></p>
-            <p class="para2" onclick="return closeTransition();" style="text-decoration: underline; cursor: pointer;"></p>
+            <p class="para2" onclick="return closeTransition();" style="text-decoration: underline; cursor: pointer;">
+            </p>
         </section>
     </section>
     <section class="transitionB hiddenBottom"></section>
