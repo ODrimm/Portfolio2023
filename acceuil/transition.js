@@ -1,4 +1,5 @@
 const transition = document.querySelector(".transition"); 
+const transitionB = document.querySelector(".transitionB"); 
 const nextPage = document.querySelector(".nextPage"); 
 
 setTimeout(() => {  //transition on page load
@@ -19,9 +20,19 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 function changePage(href){ //changepage
-    setTimeout(() => {    
-        location.href = href //load page after delay
-    }, 1000);
-    transition.classList.toggle("hiddenBottom") //make transition appear
+    
+    if(href == "./competences"){
+        setTimeout(() => {    
+            location.href = href //load page after delay
+        }, 1000);
+        transitionB.classList.toggle("hiddenBottom") //make transition appear
+
+    }else{
+        setTimeout(() => {    
+            location.href = href //load page after delay
+        }, 1000);
+        transition.classList.toggle("hiddenBottom") //make transition appear
+    }
+    
 }
 
