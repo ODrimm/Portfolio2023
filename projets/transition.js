@@ -1,5 +1,6 @@
 const transition = document.querySelector(".transition");
 const transitionBack = document.querySelector(".transitionB");
+const transitionBack2 = document.querySelector(".transitionB2");
 const museumSection = document.querySelectorAll(".museum-section");
 const nextPage = document.querySelector(".nextPage");
 const transitionContent = document.querySelector(".transition-content");
@@ -33,9 +34,17 @@ setTimeout(() => {
 }, 500);
 
 function changePage(href){
-    setTimeout(() => {    
-        location.href = href
-    }, 1000);
-    transitionBack.classList.toggle("hiddenBottom")
+    if(href == "../competences"){
+        setTimeout(() => {    
+            location.href = href
+        }, 1000);
+        transitionBack.classList.toggle("hiddenBottom")
+    }else{
+        setTimeout(() => {    
+            location.href = href
+        }, 1000);
+        transitionBack2.classList.toggle("hiddenBottom")
+    }
+    
 }
 

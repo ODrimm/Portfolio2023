@@ -51,12 +51,7 @@ body {
     z-index: 2;
 }
 
-.deco-header {
-    width: 50%;
-    margin-right: 3rem;
-    margin-right: 5rem;
-    margin-left: 1rem;
-}
+
 
 .titre {
     display: flex;
@@ -109,6 +104,95 @@ body {
     position: relative;
     top: 3px;
 }
+
+.ico {
+    display: flex;
+    width: 15rem;
+    justify-content: space-evenly;
+}
+
+.proj {
+    background-image: url('../Assets/SVG/LinkProj.svg');
+    background-size: contain;
+    background-position: center;
+    width: 2rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.comp {
+    background-image: url('../Assets/SVG/LinkComp.svg');
+    background-size: contain;
+    background-position: center;
+    width: 2rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.conclu {
+    background-image: url('../Assets/SVG/LinkConclu.svg');
+    background-size: contain;
+    background-position: center;
+    width: 2rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.proj:hover{
+    animation-duration: 1s;
+    animation-name: text-wiggle;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+.comp:hover{
+    animation-duration: 1s;
+    animation-name: text-wiggle;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+.conclu:hover{
+    animation-duration: 1s;
+    animation-name: text-wiggle;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+@keyframes text-wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(5deg);
+    }
+
+    30% {
+        transform: rotate(-5deg);
+    }
+
+    45% {
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.deco-header {
+    width: 50%;
+    margin-right: 2rem;
+    margin-right: 5rem;
+    margin-left: 1rem;
+}
+
+
 
 .main {
     position: relative;
@@ -224,6 +308,21 @@ body {
     z-index: 4;
 }
 
+.transitionB {
+    transition: all 1s;
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    left: 0;
+    z-index: 4;
+    background-image: linear-gradient(transparent, transparent 3px, #262f25);
+    background-size: 4px 4px;
+}
+
 
 
 .nextPage {
@@ -304,6 +403,12 @@ body {
 
 }
 
+@media screen and (max-width: 1230px) {
+    .deco-header {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
 
     .top {
@@ -320,7 +425,7 @@ body {
         justify-content: center;
     }
 
-    .deco-header {
+    .ico {
         display: none;
     }
 
