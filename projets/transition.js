@@ -2,7 +2,7 @@ const transition = document.querySelector(".transition");
 const transitionBack = document.querySelector(".transitionB");
 const transitionBack2 = document.querySelector(".transitionB2");
 const museumSection = document.querySelectorAll(".museum-section");
-const nextPage = document.querySelector(".nextPage");
+// const nextPage = document.querySelector(".nextPage");
 const transitionContent = document.querySelector(".transition-content");
 
 for(let i = 0; i < museumSection.length; i++){
@@ -16,7 +16,7 @@ function closeTransition(){
 
     if (window.matchMedia("(max-width: 800px)").matches) {
 
-        nextPage.classList.remove("hiddenOpacity")
+        // nextPage.classList.remove("hiddenOpacity")
         
     }else{
         setTimeout(() => {    
@@ -26,7 +26,7 @@ function closeTransition(){
 }
 
 addEventListener("click", (event) => {
-    nextPage.classList.remove("hiddenOpacity")
+    // nextPage.classList.remove("hiddenOpacity")
 });
 
 setTimeout(() => {    
