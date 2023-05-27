@@ -20,7 +20,7 @@ function closeTransition(){
         
     }else{
         setTimeout(() => {    
-            nextPage.classList.remove("hiddenOpacity")
+            // nextPage.classList.remove("hiddenOpacity")
         }, 5000);
     }
 }

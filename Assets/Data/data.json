@@ -1,12 +1,111 @@
 [
     {
         "id": 0,
-        "name": "John",
-        "middleName": "Doe"
+        "title": "Ad Vitam Aeternam",
+        "description": "description",
+        "category":["Création Web"],
+        "link": "https://ava-bacchanight.netlify.app/",
+        "imageLink": "ava.jpg",
+        "favorite": true
     },
     {
         "id": 1,
-        "name": "Caca",
-        "middleName": "Prout"
+        "title": "Plate Bumping",
+        "description": "description",
+        "category":["Création Web", "3D"],
+        "link": "https://platebumping.netlify.app/",
+        "imageLink": "platebumping.jpg",
+        "favorite": true
+    },
+    {
+        "id": 2,
+        "title": "Photographie",
+        "description": "description",
+        "category":["Photo"],
+        "link": "https://www.instagram.com/camille_fcrd/",
+        "imageLink": "photographie_insta.jpg",
+        "favorite": false
+    },
+    {
+        "id": 3,
+        "title": "FPV",
+        "description": "description",
+        "category":["Video"],
+        "link": "https://www.instagram.com/camille_fcrd/reels/",
+        "imageLink": "fpv.jpg",
+        "favorite": false
+    },
+    {
+        "id": 4,
+        "title": "Product Animation",
+        "description": "description",
+        "category":["3D"],
+        "link": "https://www.instagram.com/camille_fcrd/reels/",
+        "imageLink": "miecolo.jpg",
+        "favorite": false
+    },
+    {
+        "id": 5,
+        "title": "Swinging In The Rain",
+        "description": "description",
+        "category":["Jeux Video"],
+        "link": "https://camille-fourcade.itch.io/swinging-with-the-rain",
+        "imageLink": "swinging.jpg",
+        "favorite": false
+    },
+    {
+        "id": 6,
+        "title": "Watch",
+        "description": "description",
+        "category":["Jeux Video"],
+        "link": "https://29-coffee.itch.io/watch",
+        "imageLink": "watch.jpg",
+        "favorite": false
+    },
+    {
+        "id": 7,
+        "title": "The Others : LOADING",
+        "description": "description",
+        "category":["Jeux Video"],
+        "link": "https://camille-fourcade.itch.io/the-others",
+        "imageLink": "others.jpg",
+        "favorite": false
+    },
+    {
+        "id": 8,
+        "title": "F*CKED UP",
+        "description": "description",
+        "category":["Illustration"],
+        "link": "https://www.artstation.com/artwork/KOzZbo",
+        "imageLink": "fup.jpg",
+        "favorite": false
+    },
+    {
+        "id": 9,
+        "title": "F*CK AROUND",
+        "description": "description",
+        "category":["Illustration"],
+        "link": "https://www.artstation.com/artwork/VyBl65",
+        "imageLink": "faround.jpg",
+        "favorite": false
+    },
+    {
+        "id": 10,
+        "title": "GURL",
+        "description": "description",
+        "category":["3D"],
+        "link": "https://www.artstation.com/artwork/YKgkB3",
+        "imageLink": "gurl.jpg",
+        "favorite": false
+    },
+    {
+        "id": 11,
+        "title": "Space Bud",
+        "description": "description",
+        "category":["3D"],
+        "link": "https://www.artstation.com/artwork/LekGWk",
+        "imageLink": "space.jpg",
+        "favorite": false
     }
+    
 ]

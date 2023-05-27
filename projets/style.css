@@ -37,17 +37,22 @@ a {
 #Scene {
     background-color: white;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .top {
-    position: relative;
+    position: sticky;
     display: flex;
-    height: 10%;
+    height: 12vh;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 7;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 6px 13px -5px rgba(0, 0, 0, 0.25);
 }
 
 .deco-header {
@@ -183,13 +188,86 @@ a {
 }
 
 .content {
+    align-self: center;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     gap: 5vw;
-    height: 90vh;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 5% 10%;
+    margin-bottom: 12rem;
 }
 
+
+.museum-element{
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 29%;
+    height: 0;
+    padding-top: 19.4%;
+    cursor: pointer;
+    transition: all 0.5s ;
+}
+
+.museum-element:hover{
+    transform: scale(1.08);
+    z-index: 5;
+}
+
+.museum-title{
+    background-color: white;
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    padding-top: 0.2rem;
+    text-align: center;
+    transform: translateY(0);
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.museum-element:hover .museum-title{
+    color: black;
+    transform: translateY(-100%);
+
+}
+
+
+.bottom{
+    background-color: white;
+    position: fixed;
+    top: 100%;
+    transform: translateY(-100%);
+    box-shadow: 2px -6px 13px -5px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 7;
+    font-size: 1.5rem;
+}
+
+.bottom-text{
+    margin: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.nextPage{
+    cursor: pointer;
+}    
+
+.nextPage p{
+    text-decoration: underline;
+    text-decoration-color: white;
+    margin-top: 0;
+    transition: all 0.2s;
+}
+
+.nextPage:hover p{
+    text-decoration-color: black;
+}
 
 
 
@@ -316,70 +394,10 @@ a {
 
 
     .content {
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height: fit-content;
     }
 
-    .content .museum-wrapper {
-        flex-direction: column;
-        height: unset;
-    }
-
-    .content .museum-wrapper .boutons {
-        flex-direction: row;
-        width: unset;
-        top: unset;
-        transform: unset;
-        height: unset;
-    }
-
-    .museum-wrapper .boutons .flecheUp {
-        rotate: -90deg;
-    }
-
-    .museum-wrapper .boutons .flecheUp:hover img {
-        width: 40px;
-    }
-
-    .museum-wrapper .boutons .flecheDown {
-        rotate: 90deg;
-    }
-
-    .museum-wrapper .boutons .flecheDown:hover img {
-        width: 40px;
-    }
-
-    .museum {
-        width: 86vw;
-        height: 12rem;
-    }
-
-    .content .text {
-        margin: 0;
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .gradient {
-        background: linear-gradient(90deg, #ffffff, transparent, transparent, #ffffff);
-
-    }
-
-    .cadre {
-        width: 26vw;
-        height: 11vh;
-    }
-
-    h3 {
-        font-size: 3vh;
-    }
-
-    .nextPage {
-        width: auto;
-        text-align: center;
-
-    }
 }
 
 .hiddenTop {

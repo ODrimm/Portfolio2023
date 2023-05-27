@@ -1,6 +1,5 @@
-
-
 let data;
+const content = document.querySelector(".content");
 
 logJSONData();
 
@@ -12,6 +11,14 @@ async function logJSONData() {
 }
 
 function dataLog(jsonData) {
-    console.log(data[0].name)
-    
+    console.log(jsonData[3]);
+
+    for (let i = 0; i < jsonData.length; i++) {
+        content.innerHTML += `
+        <section class="museum-element" style="background-image: url('../Assets/Projets/${jsonData[i].imageLink}');">
+            <section class="museum-title">${jsonData[i].title}</section>
+        </section>
+        `
+    }
+
 }
