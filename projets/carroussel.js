@@ -36,23 +36,25 @@ function dataLog(jsonData) {
 
 }
 
-
+let scollEvent = false;
 
 window.addEventListener("scroll", function () {
 
-
-    if (data != undefined) {
-        for (let i = 0; i < data.length; i++) {
-            let museumElement = document.querySelector(".id" + i);
-            console.log(museumElement);
-            let rect = museumElement.getBoundingClientRect();
-
-            if (50 < rect.top && rect.top < 250) {
-                museumElement.classList.add("showMuseum");
-            } else {
-                museumElement.classList.remove("showMuseum");
+    if(!scollEvent){
+        if (data != undefined) {
+            for (let i = 0; i < data.length; i++) {
+                let museumElement = document.querySelector(".id" + i);
+                console.log(museumElement);
+                let rect = museumElement.getBoundingClientRect();
+    
+                if (50 < rect.top && rect.top < 250) {
+                    museumElement.classList.add("showMuseum");
+                } else {
+                    museumElement.classList.remove("showMuseum");
+                }
             }
         }
     }
+    scollEvent = !scollEvent;
 
 });
