@@ -445,7 +445,7 @@ body {
 }
 
 .hiddenBottom {
-  transform: translateY(-200vw);
+  transform: translateY(-300vw);
   pointer-events: none;
 }
 
