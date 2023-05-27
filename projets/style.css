@@ -441,6 +441,8 @@ a {
 
     .bottom-text{
         font-size: 1.25rem;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
     .showMuseum .museum-title{
