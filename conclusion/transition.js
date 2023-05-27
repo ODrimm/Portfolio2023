@@ -1,4 +1,5 @@
 const transition = document.querySelector(".transition");
+const transitionB = document.querySelector(".transitionB");
 const nextPage = document.querySelector(".nextPage");
 
 
@@ -8,9 +9,17 @@ setTimeout(() => {
 }, 500);
 
 function changePage(href){
-    setTimeout(() => {    
-        location.href = href
-    }, 1000);
-    transition.classList.remove("hiddenOpacity")
+    if(href == "../competences"){
+        setTimeout(() => {    
+            location.href = href
+        }, 1000);
+        transitionB.classList.remove("hiddenBottom")
+    }else{
+        setTimeout(() => {    
+            location.href = href
+        }, 1000);
+        transition.classList.remove("hiddenOpacity")
+    }
+    
 }
 

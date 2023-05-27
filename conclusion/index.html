@@ -28,10 +28,18 @@
 <body>
     <section id="Scene1">
         <section class="top">
-            <section class="titre" onclick="return changePage('../');">
-                <img class="deco-title" src="../Assets/SVG/Line-title.svg"></img>
-                <h1><span>Camille Fourcade -</span><span> MMI Bordeaux</span></h1>
+            <section class="title-wrapper">
+                <section class="titre" onclick="return changePage('../');">
+                    <img class="deco-title" src="../Assets/SVG/Line-title.svg"></img>
+                    <h1><span>Camille Fourcade -</span><span> MMI Bordeaux</span></h1>
+                </section>
+                <section class="ico">
+                    <section class="proj" onclick="return changePage('../projets');"></section>
+                    <section class="comp" onclick="return changePage('../competences');"></section>
+                    <section class="conclu" onclick="return changePage('../conclusion');"></section>
+                </section>
             </section>
+            
             <section class="top-deco">.:/!§@#</section>
         </section>
 
@@ -68,6 +76,8 @@
         </section>
     </section>
     <section class="transition"></section>
+    <section class="transitionB hiddenBottom"></section>
+    
 </body>
 
 </html>

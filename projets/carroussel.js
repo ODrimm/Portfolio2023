@@ -3,6 +3,8 @@ const content = document.querySelector(".content");
 
 logJSONData();
 
+
+
 async function logJSONData() {
     const response = await fetch("../Assets/Data/data.json");
     const jsonData = await response.json();
@@ -11,14 +13,46 @@ async function logJSONData() {
 }
 
 function dataLog(jsonData) {
-    console.log(jsonData[3]);
 
     for (let i = 0; i < jsonData.length; i++) {
-        content.innerHTML += `
-        <section class="museum-element" style="background-image: url('../Assets/Projets/${jsonData[i].imageLink}');">
-            <section class="museum-title">${jsonData[i].title}</section>
-        </section>
-        `
+        if (i == 0) {
+            content.innerHTML += `
+            <a href="${jsonData[i].link}" target="_blank" class="museum-element id${i} showMuseum" style="background-image: url('../Assets/Projets/${jsonData[i].imageLink}');">
+                <section class="museum-title">${jsonData[i].title}</section>
+                <section class="museum-description">${jsonData[i].description}</section>
+            </a>
+            `
+
+        } else {
+            content.innerHTML += `
+            <a href="${jsonData[i].link}" target="_blank" class="museum-element id${i}" style="background-image: url('../Assets/Projets/${jsonData[i].imageLink}');">
+                <section class="museum-title">${jsonData[i].title}</section>
+                <section class="museum-description">${jsonData[i].description}</section>
+            </a>
+            `
+        }
+
     }
 
 }
+
+
+
+window.addEventListener("scroll", function () {
+
+
+    if (data != undefined) {
+        for (let i = 0; i < data.length; i++) {
+            let museumElement = document.querySelector(".id" + i);
+            console.log(museumElement);
+            let rect = museumElement.getBoundingClientRect();
+
+            if (50 < rect.top && rect.top < 250) {
+                museumElement.classList.add("showMuseum");
+            } else {
+                museumElement.classList.remove("showMuseum");
+            }
+        }
+    }
+
+});

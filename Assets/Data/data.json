@@ -2,8 +2,10 @@
     {
         "id": 0,
         "title": "Ad Vitam Aeternam",
-        "description": "description",
-        "category":["Création Web"],
+        "description": "Expérience intéractive pour les expositions du musée des beaux arts de Bordeaux.",
+        "category": [
+            "Création Web"
+        ],
         "link": "https://ava-bacchanight.netlify.app/",
         "imageLink": "ava.jpg",
         "favorite": true
@@ -11,8 +13,11 @@
     {
         "id": 1,
         "title": "Plate Bumping",
-        "description": "description",
-        "category":["Création Web", "3D"],
+        "description": "Création d'un environnement 3D stylisé et intéractif.",
+        "category": [
+            "Création Web",
+            "3D"
+        ],
         "link": "https://platebumping.netlify.app/",
         "imageLink": "platebumping.jpg",
         "favorite": true
@@ -20,8 +25,10 @@
     {
         "id": 2,
         "title": "Photographie",
-        "description": "description",
-        "category":["Photo"],
+        "description": "Photographies personnelles.",
+        "category": [
+            "Photo"
+        ],
         "link": "https://www.instagram.com/camille_fcrd/",
         "imageLink": "photographie_insta.jpg",
         "favorite": false
@@ -29,26 +36,32 @@
     {
         "id": 3,
         "title": "FPV",
-        "description": "description",
-        "category":["Video"],
+        "description": "Vidéos aériennes, étalonnage et montage.",
+        "category": [
+            "Video"
+        ],
         "link": "https://www.instagram.com/camille_fcrd/reels/",
         "imageLink": "fpv.jpg",
         "favorite": false
     },
     {
         "id": 4,
-        "title": "Product Animation",
-        "description": "description",
-        "category":["3D"],
-        "link": "https://www.instagram.com/camille_fcrd/reels/",
+        "title": "Product Animation.",
+        "description": "Animation / Modélisation 3D pour le produit Miecolo",
+        "category": [
+            "3D"
+        ],
+        "link": "https://www.artstation.com/artwork/3qn2gY",
         "imageLink": "miecolo.jpg",
         "favorite": false
     },
     {
         "id": 5,
         "title": "Swinging In The Rain",
-        "description": "description",
-        "category":["Jeux Video"],
+        "description": "Jeu vidéo réalisé lors d'une game jam d'une semaine.",
+        "category": [
+            "Jeux Video"
+        ],
         "link": "https://camille-fourcade.itch.io/swinging-with-the-rain",
         "imageLink": "swinging.jpg",
         "favorite": false
@@ -56,8 +69,10 @@
     {
         "id": 6,
         "title": "Watch",
-        "description": "description",
-        "category":["Jeux Video"],
+        "description": "Jeu vidéo réalisé lors d'une game jam d'une semaine.",
+        "category": [
+            "Jeux Video"
+        ],
         "link": "https://29-coffee.itch.io/watch",
         "imageLink": "watch.jpg",
         "favorite": false
@@ -65,8 +80,10 @@
     {
         "id": 7,
         "title": "The Others : LOADING",
-        "description": "description",
-        "category":["Jeux Video"],
+        "description": "Jeu vidéo réalisé lors d'une game jam de 48h.",
+        "category": [
+            "Jeux Video"
+        ],
         "link": "https://camille-fourcade.itch.io/the-others",
         "imageLink": "others.jpg",
         "favorite": false
@@ -74,8 +91,10 @@
     {
         "id": 8,
         "title": "F*CKED UP",
-        "description": "description",
-        "category":["Illustration"],
+        "description": "Illustration au posca.",
+        "category": [
+            "Illustration"
+        ],
         "link": "https://www.artstation.com/artwork/KOzZbo",
         "imageLink": "fup.jpg",
         "favorite": false
@@ -83,8 +102,10 @@
     {
         "id": 9,
         "title": "F*CK AROUND",
-        "description": "description",
-        "category":["Illustration"],
+        "description": "Illustration d'un marque page au posca.",
+        "category": [
+            "Illustration"
+        ],
         "link": "https://www.artstation.com/artwork/VyBl65",
         "imageLink": "faround.jpg",
         "favorite": false
@@ -92,8 +113,10 @@
     {
         "id": 10,
         "title": "GURL",
-        "description": "description",
-        "category":["3D"],
+        "description": "Modélisation 3D, sculpting et texturing d'un buste.",
+        "category": [
+            "3D"
+        ],
         "link": "https://www.artstation.com/artwork/YKgkB3",
         "imageLink": "gurl.jpg",
         "favorite": false
@@ -101,11 +124,12 @@
     {
         "id": 11,
         "title": "Space Bud",
-        "description": "description",
-        "category":["3D"],
+        "description": "Animation 3D stylisée.",
+        "category": [
+            "3D"
+        ],
         "link": "https://www.artstation.com/artwork/LekGWk",
         "imageLink": "space.jpg",
         "favorite": false
     }
-    
 ]
