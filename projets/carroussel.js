@@ -116,7 +116,7 @@ window.addEventListener("scroll", function () {
                 let museumElement = document.querySelector(".id" + i);
                 let rect = museumElement.getBoundingClientRect();
     
-                if (75 < rect.top && rect.top < 400) {
+                if (130 < rect.top && rect.top < 370) {
                     museumElement.classList.add("showMuseum");
                 } else {
                     museumElement.classList.remove("showMuseum");
