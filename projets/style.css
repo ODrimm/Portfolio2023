@@ -188,31 +188,40 @@ a {
     }
 }
 
-.category{
+.category-wrapper {
+    margin-top: 5%;
+    overflow-x: unset;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.category {
     font-size: 2rem;
     gap: 1rem;
     column-gap: 2rem;
-    margin: 0 5%;
-    margin-top: 5%;
-    /* width: max-content; */
-    /* overflow-x: scroll; */
     display: flex;
     flex-wrap: wrap;
     font-size: 2rem;
+    margin: 0 5%;
+
 }
 
-.category a{
+.category a {
     color: rgb(122, 122, 122);
     text-decoration: none;
     cursor: pointer;
 }
 
-.category .active{
+.category .active {
     color: black;
     text-decoration: underline;
 }
 
-.category a:hover{
+.category a:hover {
     color: black;
 }
 
@@ -439,7 +448,15 @@ a {
         text-align: center;
     }
 
+    .category {
+        width: max-content;
+    }
 
+    .category-wrapper {
+        overflow-x: scroll;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
 
     .content {
         justify-content: space-between;
@@ -459,34 +476,42 @@ a {
         transform: scale(1);
     }
 
-    .museum-description{
+    .museum-description {
         display: none;
     }
 
-    .museum-title{
+    .museum-title {
         display: none;
     }
 
-    .bottom-text{
+    .bottom-text {
         font-size: 1.25rem;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
 
-    .showMuseum{
+    .showMuseum {
         transform: scale(1.08);
     }
 
-    .showMuseum .museum-title{
+    .showMuseum .museum-title {
         display: block;
         color: black;
         animation: museum-mobile-title 0.5s forwards;
     }
 
-    .showMuseum .museum-description{
+    .showMuseum .museum-description {
         display: block;
         color: black;
         animation: museum-mobile-description 0.5s forwards;
+    }
+
+    .bottom-text {
+        display: none;
+    }
+
+    .nextPage {
+        margin-top: 1rem;
     }
 
 }
@@ -495,7 +520,8 @@ a {
     0% {
         display: none;
     }
-    1%{
+
+    1% {
         display: block;
         transform: translate(-5%, 0);
     }
@@ -504,12 +530,14 @@ a {
         transform: translate(-5%, -100%);
     }
 }
+
 @keyframes museum-mobile-description {
     0% {
         display: none;
 
     }
-    1%{
+
+    1% {
         display: block;
         transform: translate(-5%, -100%);
     }
@@ -548,4 +576,3 @@ a {
     opacity: 0;
     transform: translateY(-20vh);
 }
-
