@@ -24,7 +24,7 @@
     },
     {
         "id": 2,
-        "title": "Photographie",
+        "title": "Photographies quotidiennes",
         "description": "Photographies personnelles.",
         "category": [
             "Photo"
@@ -35,7 +35,7 @@
     },
     {
         "id": 3,
-        "title": "FPV",
+        "title": "Paysages depuis le ciel",
         "description": "Vidéos aériennes, étalonnage et montage.",
         "category": [
             "Video"
@@ -46,8 +46,8 @@
     },
     {
         "id": 4,
-        "title": "Product Animation.",
-        "description": "Animation / Modélisation 3D pour le produit Miecolo",
+        "title": "Product Animation",
+        "description": "Animation / Modélisation 3D pour le produit Miecolo.",
         "category": [
             "3D"
         ],
