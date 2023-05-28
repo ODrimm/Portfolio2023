@@ -202,7 +202,7 @@ a {
 .category {
     font-size: 2rem;
     gap: 1rem;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     font-size: 2rem;
