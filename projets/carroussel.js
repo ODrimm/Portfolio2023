@@ -1,7 +1,7 @@
 let data;
 const content = document.querySelector(".content");
 const category = document.querySelector(".category");
-let currentCategory = "Tout";
+let currentCategory = "Tous";
 const categories = [];
 
 logJSONData();
@@ -45,7 +45,7 @@ function generateProj(jsonData) {
     }
 
     category.innerHTML += `
-        <a class="category-element Tout" onclick="return categoryChange('Tout');">Tout</a>
+        <a class="category-element Tous active" onclick="return categoryChange('Tous');">Tous</a>
     `
     for (let i = 0; i < categories.length; i++) {
         category.innerHTML += `
@@ -66,7 +66,7 @@ function categoryChange(category) {
 
     for (let i = 0; i < data.length; i++) {
 
-        if (category == "Tout") {
+        if (category == "Tous") {
             if (content.innerHTML == "") {
                 content.innerHTML += `
             <a href="${data[i].link}" target="_blank" class="museum-element id${i} showMuseum" style="background-image: url('../Assets/Projets/${data[i].imageLink}');">
@@ -112,7 +112,7 @@ function categoryChange(category) {
 window.addEventListener("scroll", function () {
     if (data != undefined) {
         for (let i = 0; i < data.length; i++) {
-            if(data[i].category.includes(currentCategory) || currentCategory == "Tout"){
+            if(data[i].category.includes(currentCategory) || currentCategory == "Tous"){
                 let museumElement = document.querySelector(".id" + i);
                 let rect = museumElement.getBoundingClientRect();
     
