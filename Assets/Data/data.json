@@ -1,0 +1,146 @@
+[
+    {
+        "id": 0,
+        "title": "Ad Vitam Aeternam",
+        "description": "Expérience intéractive mobile pour les expositions du musée des beaux arts de Bordeaux.",
+        "category": [
+            "Création Web"
+        ],
+        "link": "https://ava-bacchanight.netlify.app/",
+        "imageLink": "ava.jpg",
+        "favorite": true
+    },
+    {
+        "id": 1,
+        "title": "Plate Bumping",
+        "description": "Création d'un environnement 3D stylisé et intéractif.",
+        "category": [
+            "Création Web",
+            "3D"
+        ],
+        "link": "https://platebumping.netlify.app/",
+        "imageLink": "platebumping.jpg",
+        "favorite": true
+    },
+    {
+        "id": 2,
+        "title": "Photographies quotidiennes",
+        "description": "Photographies personnelles.",
+        "category": [
+            "Photo"
+        ],
+        "link": "https://www.instagram.com/camille_fcrd/",
+        "imageLink": "photographie_insta.jpg",
+        "favorite": false
+    },
+    {
+        "id": 3,
+        "title": "Paysages depuis le ciel",
+        "description": "Vidéos aériennes, étalonnage et montage.",
+        "category": [
+            "Video"
+        ],
+        "link": "https://www.instagram.com/camille_fcrd/reels/",
+        "imageLink": "fpv.jpg",
+        "favorite": false
+    },
+    {
+        "id": 4,
+        "title": "Product Animation",
+        "description": "Animation / Modélisation 3D pour le produit Miecolo.",
+        "category": [
+            "3D"
+        ],
+        "link": "https://www.artstation.com/artwork/3qn2gY",
+        "imageLink": "miecolo.jpg",
+        "favorite": false
+    },
+    {
+        "id": 5,
+        "title": "Swinging In The Rain",
+        "description": "Jeu vidéo réalisé lors d'une game jam d'une semaine.",
+        "category": [
+            "Jeux Video"
+        ],
+        "link": "https://camille-fourcade.itch.io/swinging-with-the-rain",
+        "imageLink": "swinging.jpg",
+        "favorite": false
+    },
+    {
+        "id": 6,
+        "title": "Watch",
+        "description": "Jeu vidéo réalisé lors d'une game jam d'une semaine.",
+        "category": [
+            "Jeux Video"
+        ],
+        "link": "https://29-coffee.itch.io/watch",
+        "imageLink": "watch.jpg",
+        "favorite": false
+    },
+    {
+        "id": 7,
+        "title": "The Others : LOADING",
+        "description": "Jeu vidéo réalisé lors d'une game jam de 48h.",
+        "category": [
+            "Jeux Video"
+        ],
+        "link": "https://camille-fourcade.itch.io/the-others",
+        "imageLink": "others.jpg",
+        "favorite": false
+    },
+    {
+        "id": 8,
+        "title": "F*CKED UP",
+        "description": "Illustration au posca.",
+        "category": [
+            "Illustration"
+        ],
+        "link": "https://www.artstation.com/artwork/KOzZbo",
+        "imageLink": "fup.jpg",
+        "favorite": false
+    },
+    {
+        "id": 9,
+        "title": "F*CK AROUND",
+        "description": "Illustration d'un marque page au posca.",
+        "category": [
+            "Illustration"
+        ],
+        "link": "https://www.artstation.com/artwork/VyBl65",
+        "imageLink": "faround.jpg",
+        "favorite": false
+    },
+    {
+        "id": 10,
+        "title": "GURL",
+        "description": "Modélisation 3D, sculpting et texturing d'un buste.",
+        "category": [
+            "3D"
+        ],
+        "link": "https://www.artstation.com/artwork/YKgkB3",
+        "imageLink": "gurl.jpg",
+        "favorite": false
+    },
+    {
+        "id": 11,
+        "title": "Space Bud",
+        "description": "Animation 3D stylisée.",
+        "category": [
+            "3D"
+        ],
+        "link": "https://www.artstation.com/artwork/LekGWk",
+        "imageLink": "space.jpg",
+        "favorite": false
+    },
+    {
+        "id": 12,
+        "title": "Pourquoi pas ?",
+        "description": "Création, écriture, présentation et montage d'une émission de télévision.",
+        "category": [
+            "Video"
+        ],
+        "link": "https://www.youtube.com/watch?v=tI54HrrvnS8",
+        "imageLink": "pourquoipas.jpg",
+        "favorite": false
+    }
+]

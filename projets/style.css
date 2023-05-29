@@ -37,23 +37,28 @@ a {
 #Scene {
     background-color: white;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .top {
-    position: relative;
+    position: sticky;
     display: flex;
-    height: 10%;
+    height: 12vh;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 3;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 6px 13px -5px rgba(0, 0, 0, 0.25);
 }
 
 .deco-header {
- 
+
     display: none;
- 
+
 }
 
 .titre {
@@ -61,6 +66,7 @@ a {
     align-items: center;
     margin-left: 1rem;
     min-width: 360px;
+    cursor: pointer;
 }
 
 .titre .deco-title {
@@ -136,7 +142,7 @@ a {
 
 }
 
-.proj:hover{
+.proj:hover {
     animation-duration: 1s;
     animation-name: text-wiggle;
     animation-delay: 0;
@@ -144,7 +150,7 @@ a {
     animation-direction: forward;
 }
 
-.comp:hover{
+.comp:hover {
     animation-duration: 1s;
     animation-name: text-wiggle;
     animation-delay: 0;
@@ -152,7 +158,7 @@ a {
     animation-direction: forward;
 }
 
-.conclu:hover{
+.conclu:hover {
     animation-duration: 1s;
     animation-name: text-wiggle;
     animation-delay: 0;
@@ -182,246 +188,146 @@ a {
     }
 }
 
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5vw;
-    height: 90vh;
+.category-wrapper {
+    margin-top: 5%;
+    overflow-x: unset;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.museum-wrapper {
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    margin-left: 2rem;
+.category-wrapper::-webkit-scrollbar {
+    display: none;
 }
 
-.museum {
-    position: relative;
-    top: 0vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 25vw;
-    overflow: hidden;
-}
-
-.museum-section {
-    width: 15vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 1s;
-}
-
-.cadre {
-    background-image: url("../Assets/Images/photo.png");
-    position: relative;
-    width: 15vw;
-    height: 19vh;
-    transition: all 0.5s cubic-bezier(0, 0.76, 0.58, 1);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-
-
-.photographie {
-    background-image: url("../Assets/Images/photo.png");
-
-}
-
-.crea-web {
-    background-image: url("../Assets/Images/creaWeb.png");
-}
-
-.video {
-    background-image: url("../Assets/Images/video.png");
-}
-
-.troid {
-    background-image: url("../Assets/Images/3d.png");
-}
-
-.jv {
-    background-image: url("../Assets/Images/jv.png");
-}
-
-.dessin {
-    background-image: url("../Assets/Images/draw.png");
-}
-
-.anim {
-    background-image: url("../Assets/Images/anim.png");
-}
-
-.mainCaroussel:hover .cadre {
-    width: 20vw;
-    height: 25vh;
-}
-
-
-
-h3 {
-    font-size: 3vw;
-    margin: 0;
-    font-weight: lighter;
-    width: max-content;
-}
-
-.paragraphe {
-    position: relative;
+.category {
+    font-size: 2rem;
+    gap: 1rem;
+    column-gap: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    pointer-events: none;
-    align-items: flex-start;
-    align-content: center;
-    font-size: 36px;
+    font-size: 2rem;
+    margin: 0 5%;
 
-    gap: 0.2rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
 }
 
-.paragraphe p {
-    margin: 0;
-    padding: 0;
-    height: 35px;
-    width: min-content;
-    pointer-events: none;
-    position: relative;
-    font-size: 36px;
-}
-
-.espace {
-    opacity: 0;
-}
-
-.nextPage {
-    width: fit-content;
-    color: black;
-    position: relative;
+.category a {
+    color: rgb(122, 122, 122);
+    text-decoration: none;
     cursor: pointer;
-    transition: all 1s;
-    font-weight: lighter;
-    height: fit-content;
+}
+
+.category .active {
+    color: black;
     text-decoration: underline;
 }
 
-.nextPage:hover {
-    animation-duration: 1s;
-    animation-name: text-wiggle;
-    animation-delay: 0;
-    animation-iteration-count: infinite;
-    animation-direction: forward;
+.category a:hover {
+    color: black;
 }
 
-@keyframes text-wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    15% {
-        transform: rotate(5deg);
-
-    }
-
-    30% {
-        transform: rotate(-5deg);
-
-    }
-
-    45% {
-        transform: rotate(5deg);
-
-    }
-
-    60% {
-        transform: rotate(0deg);
-    }
-}
-
-.gradient {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#ffffff, #ffffff00, #ffffff);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.flecheUp {
-    cursor: pointer;
-    transition: all 0.5s;
+.content {
+    align-self: center;
+    display: flex;
+    gap: 5vw;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 5% 5%;
+    margin-bottom: 12rem;
 }
 
 
-
-.flecheUp img {
-    width: 40px;
-    transition: all 0.5s;
-
-}
-
-.flecheUp:hover img {
-    width: 60px;
-}
-
-.flecheDown {
-    rotate: 180deg;
-    cursor: pointer;
-
-}
-
-
-.flecheDown img {
-    width: 40px;
-    transition: all 0.5s;
-
-}
-
-
-.flecheDown:hover img {
-    width: 60px;
-}
-
-.boutons {
-    height: 80%;
-    width: 60px;
+.museum-element {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 29%;
+    height: 0;
+    padding-top: 19.4%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.museum-element:hover {
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+.museum-title {
+    background-color: white;
+    color: white;
+    width: 110%;
+    position: absolute;
+    top: 100%;
+    padding-top: 0.2rem;
+    text-align: center;
+    transform: translate(-5%, 0);
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.museum-element:hover .museum-title {
+    color: black;
+    transform: translate(-5%, -100%);
+
+}
+
+.museum-description {
+    background-color: white;
+    color: white;
+    width: 110%;
+    position: absolute;
+    top: 0;
+    padding-top: 0.2rem;
+    text-align: center;
+    transform: translate(-5%, -100%);
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.museum-element:hover .museum-description {
+    color: black;
+    transform: translate(-5%, -5%);
+
+}
+
+
+.bottom {
+    background-color: white;
+    position: fixed;
+    top: 100%;
+    transform: translateY(-100%);
+    box-shadow: 2px -6px 13px -5px rgba(0, 0, 0, 0.25);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    z-index: 3;
+    font-size: 1.5rem;
 }
 
-.bouton {
-    border-radius: 100%;
-    background-color: black;
-    opacity: 0.3;
-    width: 10px;
-    height: 10px;
-    transition: all 0.5s;
+.bottom-text {
+    margin: 2rem 1rem 1rem 1rem;
+    text-align: center;
 }
 
-.mainBouton {
-    opacity: 1;
-    width: 15px;
-    height: 15px;
+.nextPage {
+    cursor: pointer;
 }
 
-.text {
-    font-size: 30px;
-    margin-right: 5rem;
+.nextPage p {
+    text-decoration: underline;
+    text-decoration-color: white;
+    margin-top: 0;
+    transition: all 0.2s;
 }
+
+.nextPage:hover p {
+    text-decoration-color: black;
+}
+
+
+
 
 
 .transition {
@@ -542,72 +448,102 @@ h3 {
         text-align: center;
     }
 
+    .category {
+        width: max-content;
+    }
 
+    .category-wrapper {
+        overflow-x: scroll;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
 
     .content {
-        flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
         height: fit-content;
-    }
-
-    .content .museum-wrapper {
+        margin-bottom: 15rem;
+        margin-top: 2rem;
         flex-direction: column;
-        height: unset;
+        align-items: center;
     }
 
-    .content .museum-wrapper .boutons {
-        flex-direction: row;
-        width: unset;
-        top: unset;
-        transform: unset;
-        height: unset;
+    .museum-element {
+        width: 80%;
+        padding-top: 53.5%;
     }
 
-    .museum-wrapper .boutons .flecheUp {
-        rotate: -90deg;
+    .museum-element:hover {
+        transform: scale(1);
     }
 
-    .museum-wrapper .boutons .flecheUp:hover img {
-        width: 40px;
+    .museum-description {
+        display: none;
     }
 
-    .museum-wrapper .boutons .flecheDown {
-        rotate: 90deg;
+    .museum-title {
+        display: none;
     }
 
-    .museum-wrapper .boutons .flecheDown:hover img {
-        width: 40px;
+    .bottom-text {
+        font-size: 1.25rem;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
-    .museum {
-        width: 86vw;
-        height: 12rem;
+    .showMuseum {
+        transform: scale(1.08);
     }
 
-    .content .text {
-        margin: 0;
-        margin-left: 2rem;
-        margin-right: 2rem;
+    .showMuseum .museum-title {
+        display: block;
+        color: black;
+        animation: museum-mobile-title 0.5s forwards;
     }
 
-    .gradient {
-        background: linear-gradient(90deg, #ffffff, transparent, transparent, #ffffff);
-
+    .showMuseum .museum-description {
+        display: block;
+        color: black;
+        animation: museum-mobile-description 0.5s forwards;
     }
 
-    .cadre {
-        width: 26vw;
-        height: 11vh;
-    }
-
-    h3 {
-        font-size: 3vh;
+    .bottom-text {
+        display: none;
     }
 
     .nextPage {
-        width: auto;
-        text-align: center;
+        margin-top: 1rem;
+    }
 
+}
+
+@keyframes museum-mobile-title {
+    0% {
+        display: none;
+    }
+
+    1% {
+        display: block;
+        transform: translate(-5%, 0);
+    }
+
+    100% {
+        transform: translate(-5%, -100%);
+    }
+}
+
+@keyframes museum-mobile-description {
+    0% {
+        display: none;
+
+    }
+
+    1% {
+        display: block;
+        transform: translate(-5%, -100%);
+    }
+
+    100% {
+        transform: translate(-5%, -5%);
     }
 }
 

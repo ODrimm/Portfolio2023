@@ -1,87 +1,127 @@
-const carousselElements = document.querySelectorAll(".museum-section")
-const buttons = document.querySelectorAll(".bouton")
+let data;
+const content = document.querySelector(".content");
+const category = document.querySelector(".category");
+let currentCategory = "Tous";
+const categories = [];
 
-let carousselId = 3;
-CarousselGen(carousselId);
-addEventListener("resize", (event) => {
-    CarousselGen(carousselId);
-});
+logJSONData();
 
 
-function CarousselUp() {
-    if (carousselId > 0) {
-        carousselId -= 1;
-    }
-    CarousselGen(carousselId);
+async function logJSONData() {
+    const response = await fetch("../Assets/Data/data.json");
+    const jsonData = await response.json();
+    data = jsonData;
+    generateProj(jsonData);
 }
 
-function CarousselDown() {
-    if (carousselId < 6) {
-        carousselId += 1;
+
+function generateProj(jsonData) {
+
+    for (let i = 0; i < jsonData.length; i++) {
+        for (let j = 0; j < jsonData[i].category.length; j++) {
+            if (!categories.includes(jsonData[i].category[j])) {
+                categories.push(jsonData[i].category[j]);
+            }
+        }
+
+
+        if (i == 0) {
+            content.innerHTML += `
+            <a href="${jsonData[i].link}" target="_blank" class="museum-element id${i} showMuseum" style="background-image: url('../Assets/Projets/${jsonData[i].imageLink}');">
+                <section class="museum-title">${jsonData[i].description}</section>
+                <section class="museum-description">${jsonData[i].title}</section>
+            </a>
+            `
+
+        } else {
+            content.innerHTML += `
+            <a href="${jsonData[i].link}" target="_blank" class="museum-element id${i}" style="background-image: url('../Assets/Projets/${jsonData[i].imageLink}');">
+                <section class="museum-title">${jsonData[i].description}</section>
+                <section class="museum-description">${jsonData[i].title}</section>
+            </a>
+            `
+        }
+
     }
-    CarousselGen(carousselId);
+
+    category.innerHTML += `
+        <a class="category-element Tous active" onclick="return categoryChange('Tous');">Tous</a>
+    `
+    for (let i = 0; i < categories.length; i++) {
+        category.innerHTML += `
+        <a class="category-element ${(categories[i].replace(/\s/g, '')).replace("3", "trois")}" onclick="return categoryChange('${categories[i]}');">${categories[i]}</a>
+        `
+    }
 }
 
-function CarousselGen(carousselPos) {
-    if (window.matchMedia("(max-width: 800px)").matches) {
-        
-        for (let h = 0; h < carousselElements.length; h++) {
-            carousselElements[h].classList.remove("mainCaroussel")
-            buttons[h].classList.remove("mainBouton")
-        }
-
-        for (let i = 0; i < carousselElements.length; i++) {
-           carousselElements[i].style.top = 50 + "%"
-
-            if (i == carousselPos) {
-                carousselElements[i].style.left = 40 + "%"
-                carousselElements[i].classList.add("mainCaroussel")
-                buttons[i].classList.add("mainBouton")
-            }else{
-                
-                if(i == carousselPos + 1){
-                    carousselElements[i].style.left = 95 + "%"
-                }else if(i > carousselPos + 1){
-                    carousselElements[i].style.left = 160 + "%"
-                }else if(i == carousselPos - 1){
-                    carousselElements[i].style.left = -15 + "%"
-                }else if(i < carousselPos - 1){
-                    carousselElements[i].style.left = -40 + "%"
-                }
-            }
-        }
-        
-
-    } else {
-
-        for (let h = 0; h < carousselElements.length; h++) {
-            carousselElements[h].classList.remove("mainCaroussel")
-            buttons[h].classList.remove("mainBouton")
-        }
-
-        for (let i = 0; i < carousselElements.length; i++) {
-
-            carousselElements[i].style.left = "unset"
-
-            if (i == carousselPos) {
-                carousselElements[i].style.top = 50 + "%"
-                carousselElements[i].classList.add("mainCaroussel")
-                buttons[i].classList.add("mainBouton")
-            }else{
-                
-                if(i == carousselPos + 1){
-                    carousselElements[i].style.top = 85 + "%"
-                }else if(i > carousselPos + 1){
-                    carousselElements[i].style.top = 120 + "%"
-                }else if(i == carousselPos - 1){
-                    carousselElements[i].style.top = 15 + "%"
-                }else if(i < carousselPos - 1){
-                    carousselElements[i].style.top = -20 + "%"
-                }
-            }
-        }
-        
+function categoryChange(category) {
+    currentCategory = category;
+    content.innerHTML = "";
+    let unactiveCategories = document.querySelectorAll(".category-element");
+    for(let i = 0; i < unactiveCategories.length; i++){
+        unactiveCategories[i].classList.remove("active");
     }
-
+    document.querySelector("." + (currentCategory.replace(/\s/g, '')).replace("3", "trois")).classList.add("active");
     
+
+    for (let i = 0; i < data.length; i++) {
+
+        if (category == "Tous") {
+            if (content.innerHTML == "") {
+                content.innerHTML += `
+            <a href="${data[i].link}" target="_blank" class="museum-element id${i} showMuseum" style="background-image: url('../Assets/Projets/${data[i].imageLink}');">
+                <section class="museum-title">${data[i].description}</section>
+                <section class="museum-description">${data[i].title}</section>
+            </a>
+            `
+
+            } else {
+                content.innerHTML += `
+            <a href="${data[i].link}" target="_blank" class="museum-element id${i}" style="background-image: url('../Assets/Projets/${data[i].imageLink}');">
+                <section class="museum-title">${data[i].description}</section>
+                <section class="museum-description">${data[i].title}</section>
+            </a>
+            `
+            }
+        } else if (data[i].category.includes(category)) {
+
+            if (content.innerHTML == "") {
+                console.log("test");
+                content.innerHTML += `
+            <a href="${data[i].link}" target="_blank" class="museum-element id${i} showMuseum" style="background-image: url('../Assets/Projets/${data[i].imageLink}');">
+                <section class="museum-title">${data[i].description}</section>
+                <section class="museum-description">${data[i].title}</section>
+            </a>
+            `
+
+            } else {
+                content.innerHTML += `
+            <a href="${data[i].link}" target="_blank" class="museum-element id${i}" style="background-image: url('../Assets/Projets/${data[i].imageLink}');">
+                <section class="museum-title">${data[i].description}</section>
+                <section class="museum-description">${data[i].title}</section>
+            </a>
+            `
+            }
+        }
+
+
+
+    }
 }
+
+window.addEventListener("scroll", function () {
+    if (data != undefined) {
+        for (let i = 0; i < data.length; i++) {
+            if(data[i].category.includes(currentCategory) || currentCategory == "Tous"){
+                let museumElement = document.querySelector(".id" + i);
+                let rect = museumElement.getBoundingClientRect();
+    
+                if (130 < rect.top && rect.top < 370) {
+                    museumElement.classList.add("showMuseum");
+                } else {
+                    museumElement.classList.remove("showMuseum");
+                }
+            }
+        }
+    }
+});
